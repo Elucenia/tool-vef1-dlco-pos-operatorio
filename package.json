@@ -1,0 +1,19 @@
+{
+  "name": "@elucenia/tool-vef1-dlco-pos-operatorio",
+  "version": "0.1.0",
+  "description": "VEF₁ e DLCO previstos pós-operatórios",
+  "main": "calculator.js",
+  "type": "commonjs",
+  "license": "MIT",
+  "scripts": {
+    "test": "node test.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Elucenia/tool-vef1-dlco-pos-operatorio.git"
+  }
+}

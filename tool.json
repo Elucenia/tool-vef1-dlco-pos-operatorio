@@ -1,0 +1,206 @@
+{
+  "tool": {
+    "id": "vef1-dlco-pos-operatorio",
+    "title": "VEF₁ e DLCO previstos pós-operatórios",
+    "short": "Risco da ressecção pulmonar pela contagem de segmentos",
+    "desc": "Calcule o VEF1 e a DLCO previstos pós-operatórios (ppo) pela contagem de segmentos e veja a conduta da ACCP antes de lobectomia ou pneumonectomia.",
+    "lead": "Estima a função pulmonar que restará após uma ressecção (lobectomia, segmentectomia ou pneumonectomia) e classifica o risco cirúrgico pelo algoritmo da ACCP.",
+    "spec": [
+      "cirurgia-toracica",
+      "pneumologia",
+      "cirurgia-oncologica",
+      "oncologia-clinica"
+    ],
+    "tier": 1,
+    "fields": [
+      [
+        "vef1",
+        "VEF₁ pré-operatório (pós-broncodilatador)",
+        "num",
+        {
+          "min": 10,
+          "max": 150,
+          "unit": "% do previsto",
+          "ph": "75"
+        }
+      ],
+      [
+        "dlco",
+        "DLCO pré-operatória",
+        "num",
+        {
+          "min": 10,
+          "max": 150,
+          "unit": "% do previsto",
+          "ph": "70",
+          "opt": true
+        }
+      ],
+      [
+        "seg",
+        "Segmentos <strong>funcionantes</strong> que serão ressecados",
+        "num",
+        {
+          "min": 1,
+          "max": 19,
+          "ph": "5"
+        }
+      ],
+      [
+        "obs",
+        "Segmentos obstruídos (não funcionantes) no pulmão todo",
+        "num",
+        {
+          "min": 0,
+          "max": 18,
+          "ph": "0",
+          "opt": true
+        }
+      ]
+    ],
+    "formula": "<p><strong>ppo</strong> = valor pré-operatório × (1 − y / z), em que <em>y</em> = segmentos funcionantes a ressecar e <em>z</em> = total de segmentos funcionantes (19 menos os obstruídos).</p><p>Segmentos por lobo: superior direito 3, médio 2, inferior direito 5; superior esquerdo 3 + língula 2, inferior esquerdo 4 (total 19).</p><p><strong>ACCP 2013:</strong> VEF₁ppo e DLCOppo &gt; 60% = baixo risco; algum entre 30 e 60% = teste de exercício simples; algum &lt; 30% = teste cardiopulmonar.</p>",
+    "table": [
+      [
+        "Menor valor ppo",
+        "Risco",
+        "Próximo passo (ACCP 2013)"
+      ],
+      [
+        "&gt; 60%",
+        "Baixo",
+        "Cirurgia"
+      ],
+      [
+        "30–60%",
+        "Aumentado",
+        "Escada (≥ 22 m) ou shuttle walk (≥ 400 m); se abaixo, teste cardiopulmonar"
+      ],
+      [
+        "&lt; 30%",
+        "Alto",
+        "Teste cardiopulmonar: VO₂ máx. &lt; 10 mL/kg/min ou &lt; 35% do previsto = alto risco"
+      ]
+    ],
+    "tips": [
+      "Meça DLCO em todos os candidatos, mesmo com VEF₁ normal: DLCOppo baixa prediz complicações independentemente do VEF₁.",
+      "Na pneumonectomia, ou quando há obstrução/doença heterogênea, prefira a cintilografia de perfusão quantitativa à contagem de segmentos.",
+      "Antes do algoritmo pulmonar, faça a avaliação cardiológica (por exemplo, o índice ThRCRI da ACCP).",
+      "O VEF₁ medido após a lobectomia costuma ficar acima do ppo nos pacientes com DPOC (efeito de redução de volume): o ppo é conservador."
+    ],
+    "sources": [
+      [
+        "Brunelli A et al. Physiologic evaluation of the patient with lung cancer being considered for resectional surgery: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest, 2013.",
+        "https://doi.org/10.1378/chest.12-2395"
+      ],
+      [
+        "Brunelli A et al. ERS/ESTS clinical guidelines on fitness for radical therapy in lung cancer patients (surgery and chemo-radiotherapy). Eur Respir J, 2009.",
+        "https://doi.org/10.1183/09031936.00184308"
+      ]
+    ],
+    "cases": [
+      [
+        "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+        {
+          "vef1": 90,
+          "dlco": 85,
+          "seg": 2
+        },
+        {
+          "raw": {
+            "fev": 80.53,
+            "dlco": 76.05
+          },
+          "level": "low"
+        }
+      ],
+      [
+        "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+        {
+          "vef1": 80,
+          "dlco": 75,
+          "seg": 5
+        },
+        {
+          "raw": {
+            "fev": 58.95,
+            "dlco": 55.26
+          },
+          "level": "mid",
+          "main": "55"
+        }
+      ],
+      [
+        "Pneumonectomia esquerda (9), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%",
+        {
+          "vef1": 50,
+          "dlco": 55,
+          "seg": 9
+        },
+        {
+          "raw": {
+            "fev": 26.32,
+            "dlco": 28.95
+          },
+          "level": "high"
+        }
+      ],
+      [
+        "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%: 49,4%",
+        {
+          "vef1": 70,
+          "seg": 5,
+          "obs": 2
+        },
+        {
+          "raw": {
+            "fev": 49.41
+          },
+          "level": "mid"
+        }
+      ],
+      [
+        "18 segmentos com 2 obstruídos: inválido",
+        {
+          "vef1": 70,
+          "seg": 18,
+          "obs": 2
+        },
+        {
+          "error": true
+        }
+      ]
+    ],
+    "batch": "torax-vascular",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "cardiotoracica",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/torax-vascular.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 5,
+      "passed": 5,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/torax-vascular.php",
+    "sha256": "e99bbd1938580ff9b46e0252fdd8cb72e87c63869f934005b8ef6d807ce8b6e2",
+    "bytes": 91275
+  },
+  "clinicalValidation": "not-performed"
+}

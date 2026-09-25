@@ -1,0 +1,103 @@
+[
+  {
+    "label": "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2
+    },
+    "expected": {
+      "raw": {
+        "fev": 80.53,
+        "dlco": 76.05
+      },
+      "level": "low"
+    },
+    "originalInput": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+    "input": {
+      "vef1": 80,
+      "dlco": 75,
+      "seg": 5
+    },
+    "expected": {
+      "raw": {
+        "fev": 58.95,
+        "dlco": 55.26
+      },
+      "level": "mid",
+      "main": "55"
+    },
+    "originalInput": {
+      "vef1": 80,
+      "dlco": 75,
+      "seg": 5
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Pneumonectomia esquerda (9), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%",
+    "input": {
+      "vef1": 50,
+      "dlco": 55,
+      "seg": 9
+    },
+    "expected": {
+      "raw": {
+        "fev": 26.32,
+        "dlco": 28.95
+      },
+      "level": "high"
+    },
+    "originalInput": {
+      "vef1": 50,
+      "dlco": 55,
+      "seg": 9
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%: 49,4%",
+    "input": {
+      "vef1": 70,
+      "seg": 5,
+      "obs": 2
+    },
+    "expected": {
+      "raw": {
+        "fev": 49.41
+      },
+      "level": "mid"
+    },
+    "originalInput": {
+      "vef1": 70,
+      "seg": 5,
+      "obs": 2
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "18 segmentos com 2 obstruídos: inválido",
+    "input": {
+      "vef1": 70,
+      "seg": 18,
+      "obs": 2
+    },
+    "expected": {
+      "error": true
+    },
+    "originalInput": {
+      "vef1": 70,
+      "seg": 18,
+      "obs": 2
+    },
+    "expandedZeroOptions": []
+  }
+]
