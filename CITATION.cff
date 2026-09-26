@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Se usar este pacote em pesquisa, palestra ou produto, cite-o como abaixo."
+title: "tool-vef1-dlco-pos-operatorio: VEF₁ e DLCO previstos pós-operatórios (Elucenia)"
+abstract: "Código de integração, sem dependências, que reproduz a fórmula ou escore VEF₁ e DLCO previstos pós-operatórios para navegador e Node.js, com casos de referência e testes. Reprodução técnica; sem validação clínica independente."
+type: software
+version: 0.1.0
+date-released: 2026-09-26
+license: Apache-2.0
+repository-code: "https://github.com/Elucenia/tool-vef1-dlco-pos-operatorio"
+url: "https://elucenia.org"
+authors:
+  - family-names: Guedes
+    given-names: Felipe
+    website: "https://fgxdev.com"
+    email: contato@elucenia.org
+    city: Toledo
+    region: Paraná
+    country: BR
+  - name: Elucenia
+    website: "https://elucenia.org"
+keywords:
+  - elucenia
+  - medical calculator
+  - clinical score
+  - vef1-dlco-pos-operatorio
