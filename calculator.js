@@ -1,11 +1,11 @@
-/* tool-vef1-dlco-pos-operatorio · Elucenia · https://github.com/Elucenia/tool-vef1-dlco-pos-operatorio
-   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+/* tool-vef1-dlco-pos-operatorio · ELUCENIA · https://github.com/Elucenia/tool-vef1-dlco-pos-operatorio
+   Copyright (c) 2026 ELUCENIA · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
    Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"vef1-dlco-pos-operatorio","title":"VEF₁ e DLCO previstos pós-operatórios","fields":[["vef1","VEF₁ pré-operatório (pós-broncodilatador)","num",{"min":10,"max":150,"unit":"% do previsto","ph":"75"}],["dlco","DLCO pré-operatória","num",{"min":10,"max":150,"unit":"% do previsto","ph":"70","opt":true}],["seg","Segmentos <strong>funcionantes</strong> que serão ressecados","num",{"min":1,"max":19,"ph":"5"}],["obs","Segmentos obstruídos (não funcionantes) no pulmão todo","num",{"min":0,"max":18,"ph":"0","opt":true}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};

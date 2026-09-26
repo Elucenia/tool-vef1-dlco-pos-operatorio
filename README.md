@@ -1,13 +1,13 @@
 # VEF₁ e DLCO previstos pós-operatórios
 
-Identificador: `vef1-dlco-pos-operatorio`. Pacote independente da plataforma Elucenia, para navegador e Node.js.
+Identificador: `vef1-dlco-pos-operatorio`. Pacote independente da plataforma ELUCENIA, para navegador e Node.js.
 
 ## Situação
 
 - Revisão: **needs-review**. Revisão documental e clínica independente pendente.
 - Execução: **disponível para reprodução técnica da fórmula**.
 - Validação clínica independente: **não realizada**. Os testes abaixo verificam aritmética e transporte dos campos.
-- 5 casos de referência em `examples.json`, conferidos por `test.cjs`. Verificação aritmética independente da fórmula (reimplementação a partir da literatura, entradas aleatórias): **pendente**.
+- 5 casos de referência em `examples.json`, conferidos por `test.cjs`. Verificação aritmética independente da fórmula (reimplementação a partir da literatura, entradas aleatórias): **realizada em 2026-09-25**, 70 comparações conformes.
 - Dados: o exemplo funciona localmente, sem rede, armazenamento ou identificação de pacientes.
 
 ## Uso no Node.js
@@ -56,6 +56,6 @@ Confirme população, exclusões, unidades, versão e diretriz aplicável ao pa�
 
 ## Autoria e licença
 
-Criado e mantido por **Felipe Guedes** (Engenheiro de Software e Arquiteto de Sistemas, Toledo, Paraná, Brasil) para a **Elucenia**, uma cadeia médica e científica global para acelerar a descoberta. Criado em 2026-09-26 na organização [github.com/Elucenia](https://github.com/Elucenia).
+Criado e mantido por **Felipe Guedes** (Engenheiro de Software e Arquiteto de Sistemas, Toledo, Paraná, Brasil) para a **ELUCENIA**, uma cadeia médica e científica global para acelerar a descoberta. Criado em 2026-09-26 na organização [github.com/Elucenia](https://github.com/Elucenia).
 
 Licença **Apache-2.0** (arquivo `LICENSE`): você pode usar, copiar, modificar e embutir este código no seu site ou sistema, inclusive comercial, desde que mantenha o arquivo `NOTICE` e o aviso de copyright e declare as modificações. A licença cobre o código deste pacote; instrumentos, questionários, tabelas, traduções e marcas citados nas fontes mantêm os direitos dos seus titulares (ver `NOTICE`). Detalhes em `AUTHORSHIP.md`, `CITATION.cff`, `SECURITY.md` e `CONTRIBUTING.md`. Contato: contato@elucenia.org.

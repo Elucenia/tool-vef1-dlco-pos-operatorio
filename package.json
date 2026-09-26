@@ -1,7 +1,7 @@
 {
   "name": "@elucenia/tool-vef1-dlco-pos-operatorio",
   "version": "0.1.0",
-  "description": "VEF₁ e DLCO previstos pós-operatórios · Elucenia: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
+  "description": "VEF₁ e DLCO previstos pós-operatórios · ELUCENIA: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
   "keywords": [
     "elucenia",
     "medical-calculator",
