@@ -1,0 +1,440 @@
+{
+  "id": "vef1-dlco-pos-operatorio",
+  "at": "2026-10-05T17:30:14.077Z",
+  "adapter": {
+    "file": "apps/website/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+    "bytes": 10503,
+    "sha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec"
+  },
+  "cases": [
+    {
+      "name": "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+      "input": {
+        "vef1": 90,
+        "dlco": 85,
+        "seg": 2
+      },
+      "obtained": {
+        "id": "vef1-dlco-pos-operatorio",
+        "main": [
+          "76",
+          "%"
+        ],
+        "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+        "raw": {
+          "fev": 80.52631578947368,
+          "dlco": 76.05263157894737
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.fev",
+          "expected": 80.53,
+          "obtained": 80.52631578947368,
+          "tolerance": 0.00500001,
+          "difference": 0.0036842105263161784,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.dlco",
+          "expected": 76.05,
+          "obtained": 76.05263157894737,
+          "tolerance": 0.00500001,
+          "difference": 0.002631578947372759,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.fev",
+          "expected": 80.52631578947368,
+          "obtained": 80.52631578947368,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.dlco",
+          "expected": 76.05263157894737,
+          "obtained": 76.05263157894737,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "76",
+          "obtained": "76",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "%",
+          "obtained": "%",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+      "input": {
+        "vef1": 80,
+        "dlco": 75,
+        "seg": 5
+      },
+      "obtained": {
+        "id": "vef1-dlco-pos-operatorio",
+        "main": [
+          "55",
+          "%"
+        ],
+        "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+        "raw": {
+          "fev": 58.94736842105263,
+          "dlco": 55.26315789473684
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "55",
+          "obtained": "55",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.fev",
+          "expected": 58.95,
+          "obtained": 58.94736842105263,
+          "tolerance": 0.00500001,
+          "difference": 0.002631578947372759,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.dlco",
+          "expected": 55.26,
+          "obtained": 55.26315789473684,
+          "tolerance": 0.00500001,
+          "difference": 0.0031578947368444688,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.fev",
+          "expected": 58.94736842105263,
+          "obtained": 58.94736842105263,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.dlco",
+          "expected": 55.26315789473684,
+          "obtained": 55.26315789473684,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "55",
+          "obtained": "55",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "%",
+          "obtained": "%",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "Estimativa segmentar inicial (9 segmentos funcionantes a ressecar), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%; não substitui perfusão medida na pneumonectomia",
+      "input": {
+        "vef1": 50,
+        "dlco": 55,
+        "seg": 9
+      },
+      "obtained": {
+        "id": "vef1-dlco-pos-operatorio",
+        "main": [
+          "26",
+          "%"
+        ],
+        "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+        "raw": {
+          "fev": 26.31578947368421,
+          "dlco": 28.94736842105263
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.fev",
+          "expected": 26.32,
+          "obtained": 26.31578947368421,
+          "tolerance": 0.00500001,
+          "difference": 0.004210526315791441,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.dlco",
+          "expected": 28.95,
+          "obtained": 28.94736842105263,
+          "tolerance": 0.00500001,
+          "difference": 0.0026315789473692064,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.fev",
+          "expected": 26.31578947368421,
+          "obtained": 26.31578947368421,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.dlco",
+          "expected": 28.94736842105263,
+          "obtained": 28.94736842105263,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "26",
+          "obtained": "26",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "%",
+          "obtained": "%",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%, DLCO não informada: VEF₁ parcial de 49,4%; avaliação incompleta",
+      "input": {
+        "vef1": 70,
+        "seg": 5,
+        "obs": 2
+      },
+      "obtained": {
+        "id": "vef1-dlco-pos-operatorio",
+        "main": [
+          "49",
+          "%"
+        ],
+        "label": "VEF₁ parcial: DLCO não informada",
+        "raw": {
+          "fev": 49.411764705882355,
+          "dlco": null
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.fev",
+          "expected": 49.41,
+          "obtained": 49.411764705882355,
+          "tolerance": 0.00500001,
+          "difference": 0.0017647058823584416,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.fev",
+          "expected": 49.411764705882355,
+          "obtained": 49.411764705882355,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.dlco",
+          "expected": null,
+          "obtained": null,
+          "scope": "Existing source-audit transport regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "49",
+          "obtained": "49",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "%",
+          "obtained": "%",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "18 segmentos com 2 obstruídos: inválido",
+      "input": {
+        "vef1": 70,
+        "seg": 18,
+        "obs": 2
+      },
+      "obtained": {
+        "error": "Os segmentos a ressecar não podem passar do total de segmentos funcionantes (19 menos os obstruídos).",
+        "code": "FORMULA_DOMAIN"
+      },
+      "checks": [
+        {
+          "at": "recorded-rejection",
+          "expected": "4xx with error and no result",
+          "obtained": {
+            "status": 422,
+            "error": "Os segmentos a ressecar não podem passar do total de segmentos funcionantes (19 menos os obstruídos).",
+            "result": false
+          },
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    }
+  ],
+  "refusals": {
+    "passed": 49,
+    "failed": 0,
+    "failures": []
+  },
+  "sourceNodeBrowserVmParity": true,
+  "actualBrowserDomVerified": false,
+  "newIndependentOracle": false,
+  "currentActualR6HttpEvidence": "pending",
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

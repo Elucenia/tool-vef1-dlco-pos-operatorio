@@ -1,0 +1,640 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option mode",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "mode": "__ELUCENIA_INVALID_OPTION__"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "mode"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field vef1",
+    "input": {
+      "dlco": 85,
+      "seg": 2
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "vef1"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field vef1",
+    "input": {
+      "vef1": "",
+      "dlco": 85,
+      "seg": 2
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "vef1"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" vef1",
+    "input": {
+      "vef1": "NaN",
+      "dlco": 85,
+      "seg": 2
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vef1"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" vef1",
+    "input": {
+      "vef1": "Infinity",
+      "dlco": 85,
+      "seg": 2
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vef1"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" vef1",
+    "input": {
+      "vef1": "1e309",
+      "dlco": 85,
+      "seg": 2
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vef1"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" vef1",
+    "input": {
+      "vef1": "invalid",
+      "dlco": 85,
+      "seg": 2
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vef1"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} vef1",
+    "input": {
+      "vef1": {},
+      "dlco": 85,
+      "seg": 2
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vef1"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true vef1",
+    "input": {
+      "vef1": true,
+      "dlco": 85,
+      "seg": 2
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vef1"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum vef1",
+    "input": {
+      "vef1": 9,
+      "dlco": 85,
+      "seg": 2
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "vef1"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum vef1",
+    "input": {
+      "vef1": 165,
+      "dlco": 85,
+      "seg": 2
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "vef1"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" dlco",
+    "input": {
+      "vef1": 90,
+      "dlco": "NaN",
+      "seg": 2
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "dlco"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" dlco",
+    "input": {
+      "vef1": 90,
+      "dlco": "Infinity",
+      "seg": 2
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "dlco"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" dlco",
+    "input": {
+      "vef1": 90,
+      "dlco": "1e309",
+      "seg": 2
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "dlco"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" dlco",
+    "input": {
+      "vef1": 90,
+      "dlco": "invalid",
+      "seg": 2
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "dlco"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} dlco",
+    "input": {
+      "vef1": 90,
+      "dlco": {},
+      "seg": 2
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "dlco"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true dlco",
+    "input": {
+      "vef1": 90,
+      "dlco": true,
+      "seg": 2
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "dlco"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum dlco",
+    "input": {
+      "vef1": 90,
+      "dlco": 9,
+      "seg": 2
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "dlco"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum dlco",
+    "input": {
+      "vef1": 90,
+      "dlco": 165,
+      "seg": 2
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "dlco"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" seg",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": "NaN"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "seg"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" seg",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": "Infinity"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "seg"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" seg",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": "1e309"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "seg"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" seg",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": "invalid"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "seg"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} seg",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": {}
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "seg"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true seg",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": true
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "seg"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum seg",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 0
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "seg"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum seg",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 20.9
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "seg"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject noninteger numeric field seg",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 1.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "seg"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" obs",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "obs": "NaN"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "obs"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" obs",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "obs": "Infinity"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "obs"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" obs",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "obs": "1e309"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "obs"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" obs",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "obs": "invalid"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "obs"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} obs",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "obs": {}
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "obs"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true obs",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "obs": true
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "obs"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum obs",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "obs": -1
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "obs"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum obs",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "obs": 19.8
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "obs"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject noninteger numeric field obs",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "obs": 0.5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "obs"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" perfusao",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "perfusao": "NaN"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "perfusao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" perfusao",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "perfusao": "Infinity"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "perfusao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" perfusao",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "perfusao": "1e309"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "perfusao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" perfusao",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "perfusao": "invalid"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "perfusao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} perfusao",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "perfusao": {}
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "perfusao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true perfusao",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "perfusao": true
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "perfusao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum perfusao",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "perfusao": -1
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "perfusao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum perfusao",
+    "input": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2,
+      "perfusao": 110
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "perfusao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

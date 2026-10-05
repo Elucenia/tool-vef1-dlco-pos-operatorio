@@ -3,16 +3,29 @@
     "id": "vef1-dlco-pos-operatorio",
     "title": "VEF₁ e DLCO previstos pós-operatórios",
     "short": "Risco da ressecção pulmonar pela contagem de segmentos",
-    "desc": "Calcule o VEF1 e a DLCO previstos pós-operatórios (ppo) pela contagem de segmentos e veja a conduta da ACCP antes de lobectomia ou pneumonectomia.",
-    "lead": "Estima a função pulmonar que restará após uma ressecção (lobectomia, segmentectomia ou pneumonectomia) e classifica o risco cirúrgico pelo algoritmo da ACCP.",
+    "desc": "Estima VEF₁ e DLCO pós-operatórios por segmentos funcionantes ou por perfusão pulmonar medida, conforme o método escolhido; a ausência de DLCO mantém a avaliação incompleta.",
+    "lead": "Para lobectomia ou segmentectomia, usa a contagem inicial de segmentos funcionantes (19 menos os obstruídos). Para pneumonectomia, exige a percentagem medida da perfusão total atribuída ao pulmão a ressecar. O método segmentar não substitui essa medição. A função prevista é calculada dentro da ELUCENIA; o resultado isolado não aprova cirurgia.",
+    "kind": "Calculadora",
     "spec": [
       "cirurgia-toracica",
       "pneumologia",
       "cirurgia-oncologica",
       "oncologia-clinica"
     ],
-    "tier": 1,
     "fields": [
+      [
+        "mode",
+        "Método de estimativa",
+        "sel",
+        {
+          "opt": true,
+          "defaultValue": "segmental",
+          "opts": {
+            "segmental": "Contagem de segmentos funcionantes",
+            "perfusion": "Perfusão pulmonar medida"
+          }
+        }
+      ],
       [
         "vef1",
         "VEF₁ pré-operatório (pós-broncodilatador)",
@@ -43,7 +56,10 @@
         {
           "min": 1,
           "max": 19,
-          "ph": "5"
+          "ph": "5",
+          "integer": true,
+          "step": 1,
+          "opt": true
         }
       ],
       [
@@ -54,39 +70,25 @@
           "min": 0,
           "max": 18,
           "ph": "0",
+          "opt": true,
+          "integer": true,
+          "step": 1
+        }
+      ],
+      [
+        "perfusao",
+        "Perfusão do pulmão a ressecar",
+        "num",
+        {
+          "min": 0,
+          "max": 100,
+          "unit": "% da perfusão total",
+          "ph": "50",
           "opt": true
         }
       ]
     ],
-    "formula": "<p><strong>ppo</strong> = valor pré-operatório × (1 − y / z), em que <em>y</em> = segmentos funcionantes a ressecar e <em>z</em> = total de segmentos funcionantes (19 menos os obstruídos).</p><p>Segmentos por lobo: superior direito 3, médio 2, inferior direito 5; superior esquerdo 3 + língula 2, inferior esquerdo 4 (total 19).</p><p><strong>ACCP 2013:</strong> VEF₁ppo e DLCOppo &gt; 60% = baixo risco; algum entre 30 e 60% = teste de exercício simples; algum &lt; 30% = teste cardiopulmonar.</p>",
-    "table": [
-      [
-        "Menor valor ppo",
-        "Risco",
-        "Próximo passo (ACCP 2013)"
-      ],
-      [
-        "&gt; 60%",
-        "Baixo",
-        "Cirurgia"
-      ],
-      [
-        "30–60%",
-        "Aumentado",
-        "Escada (≥ 22 m) ou shuttle walk (≥ 400 m); se abaixo, teste cardiopulmonar"
-      ],
-      [
-        "&lt; 30%",
-        "Alto",
-        "Teste cardiopulmonar: VO₂ máx. &lt; 10 mL/kg/min ou &lt; 35% do previsto = alto risco"
-      ]
-    ],
-    "tips": [
-      "Meça DLCO em todos os candidatos, mesmo com VEF₁ normal: DLCOppo baixa prediz complicações independentemente do VEF₁.",
-      "Na pneumonectomia, ou quando há obstrução/doença heterogênea, prefira a cintilografia de perfusão quantitativa à contagem de segmentos.",
-      "Antes do algoritmo pulmonar, faça a avaliação cardiológica (por exemplo, o índice ThRCRI da ACCP).",
-      "O VEF₁ medido após a lobectomia costuma ficar acima do ppo nos pacientes com DPOC (efeito de redução de volume): o ppo é conservador."
-    ],
+    "formula": "<p><strong>Modo segmentar:</strong> PPO = valor pré-operatório × (1 − y/z), em que y é a contagem de segmentos funcionantes a ressecar e z = 19 menos a contagem de segmentos obstruídos. Os segmentos são contagens inteiras e y não pode superar z.</p><p><strong>Modo por perfusão:</strong> PPO = valor pré-operatório × (1 − P/100), em que P é a percentagem medida da perfusão total atribuída ao pulmão a ressecar. Esta fração não é inferida da contagem de segmentos.</p><p>A equação é aplicada separadamente ao VEF₁ e à DLCO. Sem DLCO, o resultado é um VEF₁ parcial e a avaliação permanece incompleta. A escolha clínica da intervenção e da estratégia de avaliação exige revisão profissional.</p>",
     "sources": [
       [
         "Brunelli A et al. Physiologic evaluation of the patient with lung cancer being considered for resectional surgery: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest, 2013.",
@@ -130,7 +132,7 @@
         }
       ],
       [
-        "Pneumonectomia esquerda (9), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%",
+        "Estimativa segmentar inicial (9 segmentos funcionantes a ressecar), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%; não substitui perfusão medida na pneumonectomia",
         {
           "vef1": 50,
           "dlco": 55,
@@ -145,7 +147,7 @@
         }
       ],
       [
-        "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%: 49,4%",
+        "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%, DLCO não informada: VEF₁ parcial de 49,4%; avaliação incompleta",
         {
           "vef1": 70,
           "seg": 5,
@@ -155,7 +157,7 @@
           "raw": {
             "fev": 49.41
           },
-          "level": "mid"
+          "level": "info"
         }
       ],
       [
@@ -170,28 +172,685 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
-      "testedAt": "2026-09-25",
+      "testedAt": "2026-10-04",
       "total": 5,
       "passed": 5,
-      "failures": []
+      "failures": [],
+      "previous": {
+        "status": "passed",
+        "testedAt": "2026-09-25",
+        "total": 5,
+        "passed": 5,
+        "failures": []
+      },
+      "fixtureAmendments": [
+        {
+          "index": 2,
+          "kind": "source-scenario-caption",
+          "reason": "Nine functioning segments alone do not establish measured perfusion for pneumonectomy."
+        },
+        {
+          "index": 3,
+          "kind": "incomplete-assessment-policy",
+          "reason": "MissingDLCO cannot establish complete low/intermediate risk; numeric input/expected FEV unchanged."
+        }
+      ],
+      "implementationHash": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec"
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T17:40:32.890Z",
+      "total": 9720,
+      "passed": 9720,
+      "sourceRowCount": 9720,
+      "uniqueApiInputCount": 9716,
+      "sourceContextCount": 9720,
+      "embeddedCasesAreSubset": true,
+      "embeddedCaseCount": 4,
+      "caseStorage": {
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "file": "independent-source-cases.json",
+        "sha256": "657d06447c1b0026771ab8de9624c18dec65e50e43bf64fd03c08df806f4c117",
+        "total": 9720,
+        "bankRowCount": 9720,
+        "uniqueApiInputCount": 9716,
+        "sourceContextCount": 9720,
+        "expectedEvidence": [
+          {
+            "file": "reports/review-20261003/ppo-bank-source-independent-expectations-publication-final26.json",
+            "sha256": "1442f68d270ecbb86a292b159c47440d05eca4d16fcff19bb9e4071c49408c76"
+          },
+          {
+            "file": "reports/review-20261003/ppo-incomplete-independent-peer-expectations-final26.json",
+            "sha256": "01917e1f490ee3bea319a142bdec5a6ff63ded9cecf736783fe29cd7473e2ecd"
+          },
+          {
+            "file": "reports/review-20261003/ppo-boundary-independent-expectations-final26.json",
+            "sha256": "34212736705e34860fda279bb7c29635cb9ce0e18d756d88c745ea212accaa03"
+          },
+          {
+            "file": "reports/review-20261003/ppo-half-display-root-independent-expected-final26.json",
+            "sha256": "944f02f456d532d0418172dc23cde9243648b089a977cbd0d2b80f9904c52a9b"
+          },
+          {
+            "file": "reports/review-20261003/ppo-perfusion-root-independent-expected-final26.json",
+            "sha256": "19fbe9404a502ac6d8cc0b2314d9a9fece7030a905a9a743f518212d3af74dd3"
+          }
+        ],
+        "obtainedEvidence": {
+          "file": "reports/review-20261003/ppo-source-bank-independent-check-publication-final26-r2.json",
+          "sha256": "daa730bf22767da5d9e969d23b45359651f66077d6735c2e7732b1709307c833"
+        },
+        "packagingRequirement": "Compose reviewed PPO R3 engine/field/source/locale/UI hashes and freeze26 before package generation."
+      },
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "sourceRows": 9720,
+        "uniqueApiInputs": 9716,
+        "duplicateRows": 4,
+        "expectationAudit": {
+          "file": "reports/review-20261003/ppo-bank-source-independent-expectations-publication-final26.json",
+          "sha256": "1442f68d270ecbb86a292b159c47440d05eca4d16fcff19bb9e4071c49408c76"
+        }
+      },
+      "scope": "9,720 retained source-equation scenarios (9,716 distinct stored input objects): exact nearest binary64 FEV1/DLCO outputs and exact positive half-up whole-percent display.9,287 segmental scenarios and433 measured-perfusion scenarios; four repeated inputs retained. No clinical risk/verdict, intervention eligibility, full surgical algorithm or licensed/professional translation approval.",
+      "sources": [
+        {
+          "primaryUrl": "https://scts.org/_userfiles/pages/files/guidelines/thoracic/ersests_clinical_guidelines_on_fitness_for_radical_therapy_in_lung_cancer_patients_surgery_and_chemoradiotherapy.pdf",
+          "localPdf": "cardiopulmonary-primary-final26/ers-ests2009.pdf",
+          "pdfSha256": "47d2b904a3c817310eeb286dd9e08ba0ae70cef8eb7b69143438aa0ac15a8722",
+          "numericEvidenceEdition": "ERS/ESTS2009 page22 component equations: initial functioning-segment estimate and specifically pre-pneumonectomy measured-perfusion equation.",
+          "ownReadScope": "Previously personally viewed only PDFpage6/printed22 and reopened original ACCP2013 Results abstract. No whole article/2014erratum read claim.",
+          "classificationSource": {
+            "url": "https://pubmed.ncbi.nlm.nih.gov/23649437/",
+            "scope": "Results abstract only. Source-private strict30/60 boundaries and missingDLCO incomplete local-policy proofs are separate; not clinically approved or exposed as generic advice."
+          }
+        }
+      ],
+      "evidencePath": "reports/review-20261003/ppo-source-bank-independent-check-publication-final26-r2.json",
+      "evidenceSha256": "daa730bf22767da5d9e969d23b45359651f66077d6735c2e7732b1709307c833",
+      "independentPeer": {
+        "status": "passed",
+        "requiredScope": "Independent complete-bank/metadata/helper review and final26 source/engine composition.",
+        "recordedAt": "2026-10-04T18:58:14.583Z",
+        "scope": "Existing independent technical complete-bank/metadata/helper peer recorded after guarded source26 application. This status does not certify clinical eligibility, full instrument conformance, professional translation or source rights; no new arithmetic/browser execution is claimed by this metadata amendment.",
+        "previousStatus": {
+          "status": "pending",
+          "requiredScope": "Independent complete-bank/metadata/helper review and final26 source/engine composition."
+        },
+        "peer": {
+          "file": "reports/review-20261003/ppo-source-bank-root-peer-final26.json",
+          "sha256": "66a20738768d57347e2bbb0bd79360ba1fff1286d8628d6e9dd324ab690115a1",
+          "summary": {
+            "checks": 59772,
+            "failed": 0,
+            "sourceRows": 9720,
+            "uniqueInputObjects": 9716,
+            "duplicateRows": 4,
+            "sourceMethodsAfter": 138,
+            "sourceRowsAfter": 70585
+          },
+          "scope": "Independent root Fraction-derived source expectation objects were frozen before engine imports. All9720 stored inputs, exact nearest binary64 FEV/DLCO expectations and half-up whole displays compared to those frozen root objects, all137 other source-method objects preserved, all11 candidate pre/post SHA bindings checked. Fresh exact NodeVM/Chromium replay bound separately; no clinical/professional/full-method approval."
+        },
+        "application": {
+          "file": "reports/review-20261003/ppo-source-bank-evidence-application-final26.json",
+          "sha256": "0103689e1d2234f12c16f290e8463a51f7638cd40ffaee4f6fdbed37586a9c6d"
+        },
+        "reviewedBankScope": "9,720 retained source-equation scenarios (9,716 distinct stored input objects): exact nearest binary64 FEV1/DLCO outputs and exact positive half-up whole-percent display.9,287 segmental scenarios and433 measured-perfusion scenarios; four repeated inputs retained. No clinical risk/verdict, intervention eligibility, full surgical algorithm or licensed/professional translation approval.",
+        "currentBinding": {
+          "source26BankSha256": "52e1ccd833a0be0f16e6f61ccf1571df44ddee7bc2e59937ca1a371953bace53",
+          "implementations": [
+            {
+              "file": "apps/website/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+              "sha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec"
+            },
+            {
+              "file": "apps/dashboard/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+              "sha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec"
+            },
+            {
+              "file": "apps/command-center/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+              "sha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec"
+            }
+          ],
+          "subsequentReviewedRebinds": []
+        },
+        "originalFailuresAndScopeQualificationsPreserved": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed"
+      },
+      "actualAdapterExecutions": 29160,
+      "actualVmExecutions": 29160,
+      "implementations": [
+        {
+          "app": "website",
+          "file": "apps/website/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+          "sha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec",
+          "candidatePath": "reports/review-20261003/ppo-source-rational-output-stage-final26-r3/apps/website/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+          "currentBeforeSha256": "33bfb202ee21e972d936572978b0b8d0d69321ad8feb136e407e7ba84bddad3b",
+          "scope": "Proposed R3 exact-rational source outputs. Application/source/metadata composition required before final packaging."
+        },
+        {
+          "app": "dashboard",
+          "file": "apps/dashboard/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+          "sha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec",
+          "candidatePath": "reports/review-20261003/ppo-source-rational-output-stage-final26-r3/apps/dashboard/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+          "currentBeforeSha256": "33bfb202ee21e972d936572978b0b8d0d69321ad8feb136e407e7ba84bddad3b",
+          "scope": "Proposed R3 exact-rational source outputs. Application/source/metadata composition required before final packaging."
+        },
+        {
+          "app": "command-center",
+          "file": "apps/command-center/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+          "sha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec",
+          "candidatePath": "reports/review-20261003/ppo-source-rational-output-stage-final26-r3/apps/command-center/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+          "currentBeforeSha256": "33bfb202ee21e972d936572978b0b8d0d69321ad8feb136e407e7ba84bddad3b",
+          "scope": "Proposed R3 exact-rational source outputs. Application/source/metadata composition required before final packaging."
+        }
+      ],
+      "qualifications": [
+        "9,720 retained source-equation scenarios (9,716 distinct stored input objects): exact nearest binary64 FEV1/DLCO outputs and exact positive half-up whole-percent display.9,287 segmental scenarios and433 measured-perfusion scenarios; four repeated inputs retained. No clinical risk/verdict, intervention eligibility, full surgical algorithm or licensed/professional translation approval.",
+        "Functioning segments are integer counts, not fractions. Clinical source context distinguishes initial segmental estimate from measured perfusion before pneumonectomy; no perfusion inferred from19segments.0/100% perfusion is a mathematical domain, not surgical eligibility.",
+        "Private level/verdict/rows/note and patient-specific cardiovascular/exercise/eligibility decisions are not checked or exposed by this public numeric bank. Missing DLCO remains incomplete.39 missing-FEV<30 nuances,46 unsupported-low old cases and276 old complete-boundary failures stay in separate historical source evidence.",
+        "594 original half-display input failures (2376 four-engine observations),7 rawsource4EPS input failures (56 observations), and12 earlier perfusion rounding failures remain in untouched historical reports. New exact-bit policy does not erase or broaden their criteria.",
+        "All862 existing source fixtures/tolerances/approval flags remain unchanged. Four inline examples are only a subset of this complete downloadable bank.",
+        "Final26 source/field/version/locale/UI composition, engine application, independent metadata/helper peer, fresh build/packages and221×10 browser journeys are required before publication."
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "ERS/ESTS 2009, página 22: estimativa inicial por segmentos funcionantes e fórmula pré-pneumonectomia por fração de perfusão medida; cortes do resumo ACCP 2013: ambos >60%, algum entre 30–60% e algum <30%; sem conformidade clínica integral",
+    "implementationVersion": "vef1-dlco-pos-operatorio@native-2026-10-04+2b9dd75698a2",
+    "currentMethodSource": "ERS/ESTS2009 PDFp6/printed22; ACCP2013 Resultsabstract only",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-04",
+      "implementedVariant": "ERS/ESTS 2009, página 22: estimativa inicial por segmentos funcionantes e fórmula pré-pneumonectomia por fração de perfusão medida; cortes do resumo ACCP 2013: ambos >60%, algum entre 30–60% e algum <30%; sem conformidade clínica integral",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "mode",
+            "label": "Método de estimativa",
+            "type": "sel",
+            "optional": true,
+            "options": {
+              "segmental": "Contagem de segmentos funcionantes",
+              "perfusion": "Perfusão pulmonar medida"
+            },
+            "defaultValue": "segmental"
+          },
+          {
+            "key": "vef1",
+            "label": "VEF₁ pré-operatório (pós-broncodilatador)",
+            "type": "num",
+            "min": 10,
+            "max": 150,
+            "unit": "% do previsto",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "dlco",
+            "label": "DLCO pré-operatória",
+            "type": "num",
+            "min": 10,
+            "max": 150,
+            "unit": "% do previsto",
+            "optional": true,
+            "options": null
+          },
+          {
+            "key": "seg",
+            "label": "Segmentos <strong>funcionantes</strong> que serão ressecados",
+            "type": "num",
+            "min": 1,
+            "max": 19,
+            "optional": true,
+            "options": null,
+            "integer": true,
+            "step": 1
+          },
+          {
+            "key": "obs",
+            "label": "Segmentos obstruídos (não funcionantes) no pulmão todo",
+            "type": "num",
+            "min": 0,
+            "max": 18,
+            "optional": true,
+            "options": null,
+            "integer": true,
+            "step": 1
+          },
+          {
+            "key": "perfusao",
+            "label": "Perfusão do pulmão a ressecar",
+            "type": "num",
+            "min": 0,
+            "max": 100,
+            "unit": "% da perfusão total",
+            "optional": true,
+            "options": null
+          }
+        ],
+        "hash": "2ecfe251837dd07b3011055692ee0e3f0979336356a1a47a0499019d3d918225",
+        "hashDefinition": "SHA256 JSON.stringify({id,fields,formula,config:config||null})",
+        "conditional": {
+          "mode": {
+            "optional": true,
+            "defaultValue": "segmental",
+            "enumKeys": [
+              "segmental",
+              "perfusion"
+            ]
+          },
+          "seg": {
+            "optionalInSchema": true,
+            "requiredWhenMode": "segmental",
+            "integer": true
+          },
+          "obs": {
+            "optionalInSchema": true,
+            "visibleWhenMode": "segmental",
+            "integer": true
+          },
+          "perfusao": {
+            "optionalInSchema": true,
+            "requiredWhenMode": "perfusion",
+            "range": [
+              0,
+              100
+            ],
+            "unit": "% da perfusão total"
+          },
+          "inactiveValues": "Provided nonempty inactive method inputs are rejected; no hidden/inferred perfusion fraction.",
+          "clinicalDecisions": "No generic level/verdict exposure; new method changes raw numeric output/labels only."
+        }
+      },
+      "sourceEditions": [
+        {
+          "citation": "Brunelli A et al. Physiologic evaluation of the patient with lung cancer being considered for resectional surgery: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest, 2013.",
+          "url": "https://doi.org/10.1378/chest.12-2395",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Physiologic evaluation of the patient with lung cancer being considered for resectional surgery: Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines.",
+            "year": "2013",
+            "firstPublicationDate": "2013-05-01",
+            "doi": "10.1378/chest.12-2395",
+            "pmid": "23649437",
+            "journal": "Chest",
+            "authors": "Brunelli A, Kim AW, Berger KI, Addrizzo-Harris DJ."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/23649437/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "97e26f72cd9e23ffaafc2f99d00aa9a12881f2026d2183d1cf0588e799ff230e",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Brunelli A et al. ERS/ESTS clinical guidelines on fitness for radical therapy in lung cancer patients (surgery and chemo-radiotherapy). Eur Respir J, 2009.",
+          "url": "https://doi.org/10.1183/09031936.00184308",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": true,
+          "formulaConformance": "limited-equations-only",
+          "publication": {
+            "title": "ERS/ESTS clinical guidelines on fitness for radical therapy in lung cancer patients (surgery and chemo-radiotherapy).",
+            "year": "2009",
+            "firstPublicationDate": "2009-07-01",
+            "doi": "10.1183/09031936.00184308",
+            "pmid": "19567600",
+            "journal": "The European respiratory journal",
+            "authors": "Brunelli A, Charloux A, Bolliger CT, Rocco G, Sculier JP, Varela G, Licker M, Ferguson MK, Faivre-Finn C, Huber RM, Clini EM, Win T, De Ruysscher D, Goldman L, European Respiratory Society and European Society of Thoracic Surgeons joint task force on fitness for radical therapy."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/19567600/",
+          "abstractAvailable": true,
+          "fullTextSha256": "47d2b904a3c817310eeb286dd9e08ba0ae70cef8eb7b69143438aa0ac15a8722",
+          "abstractSha256": "3250da622a41d16a14c6916c4252c695f7a2ad9daa098f246d3f4255de9407dc",
+          "matchedBy": "exact-DOI-or-PMID",
+          "previousAccessMetadata": {
+            "fullTextRetrieved": false,
+            "fullTextSha256": null,
+            "formulaConformance": "not-assessed"
+          },
+          "readScope": "Only PDFpage6/printed22 personally inspected for segment and measured-perfusion equations; not a complete article review"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Numeric segmental/perfusion formulas and exact raw/main output independently checked; complete instrument/clinical conformance not approved",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T17:40:32.890Z",
+        "total": 9720,
+        "passed": 9720,
+        "sourceRowCount": 9720,
+        "uniqueApiInputCount": 9716,
+        "sourceContextCount": 9720,
+        "embeddedCasesAreSubset": true,
+        "embeddedCaseCount": 4,
+        "caseStorage": {
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "file": "independent-source-cases.json",
+          "sha256": "657d06447c1b0026771ab8de9624c18dec65e50e43bf64fd03c08df806f4c117",
+          "total": 9720,
+          "bankRowCount": 9720,
+          "uniqueApiInputCount": 9716,
+          "sourceContextCount": 9720,
+          "expectedEvidence": [
+            {
+              "file": "reports/review-20261003/ppo-bank-source-independent-expectations-publication-final26.json",
+              "sha256": "1442f68d270ecbb86a292b159c47440d05eca4d16fcff19bb9e4071c49408c76"
+            },
+            {
+              "file": "reports/review-20261003/ppo-incomplete-independent-peer-expectations-final26.json",
+              "sha256": "01917e1f490ee3bea319a142bdec5a6ff63ded9cecf736783fe29cd7473e2ecd"
+            },
+            {
+              "file": "reports/review-20261003/ppo-boundary-independent-expectations-final26.json",
+              "sha256": "34212736705e34860fda279bb7c29635cb9ce0e18d756d88c745ea212accaa03"
+            },
+            {
+              "file": "reports/review-20261003/ppo-half-display-root-independent-expected-final26.json",
+              "sha256": "944f02f456d532d0418172dc23cde9243648b089a977cbd0d2b80f9904c52a9b"
+            },
+            {
+              "file": "reports/review-20261003/ppo-perfusion-root-independent-expected-final26.json",
+              "sha256": "19fbe9404a502ac6d8cc0b2314d9a9fece7030a905a9a743f518212d3af74dd3"
+            }
+          ],
+          "obtainedEvidence": {
+            "file": "reports/review-20261003/ppo-source-bank-independent-check-publication-final26-r2.json",
+            "sha256": "daa730bf22767da5d9e969d23b45359651f66077d6735c2e7732b1709307c833"
+          },
+          "packagingRequirement": "Compose reviewed PPO R3 engine/field/source/locale/UI hashes and freeze26 before package generation."
+        },
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "sourceRows": 9720,
+          "uniqueApiInputs": 9716,
+          "duplicateRows": 4,
+          "expectationAudit": {
+            "file": "reports/review-20261003/ppo-bank-source-independent-expectations-publication-final26.json",
+            "sha256": "1442f68d270ecbb86a292b159c47440d05eca4d16fcff19bb9e4071c49408c76"
+          }
+        },
+        "scope": "9,720 retained source-equation scenarios (9,716 distinct stored input objects): exact nearest binary64 FEV1/DLCO outputs and exact positive half-up whole-percent display.9,287 segmental scenarios and433 measured-perfusion scenarios; four repeated inputs retained. No clinical risk/verdict, intervention eligibility, full surgical algorithm or licensed/professional translation approval.",
+        "sources": [
+          {
+            "primaryUrl": "https://scts.org/_userfiles/pages/files/guidelines/thoracic/ersests_clinical_guidelines_on_fitness_for_radical_therapy_in_lung_cancer_patients_surgery_and_chemoradiotherapy.pdf",
+            "localPdf": "cardiopulmonary-primary-final26/ers-ests2009.pdf",
+            "pdfSha256": "47d2b904a3c817310eeb286dd9e08ba0ae70cef8eb7b69143438aa0ac15a8722",
+            "numericEvidenceEdition": "ERS/ESTS2009 page22 component equations: initial functioning-segment estimate and specifically pre-pneumonectomy measured-perfusion equation.",
+            "ownReadScope": "Previously personally viewed only PDFpage6/printed22 and reopened original ACCP2013 Results abstract. No whole article/2014erratum read claim.",
+            "classificationSource": {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/23649437/",
+              "scope": "Results abstract only. Source-private strict30/60 boundaries and missingDLCO incomplete local-policy proofs are separate; not clinically approved or exposed as generic advice."
+            }
+          }
+        ],
+        "evidencePath": "reports/review-20261003/ppo-source-bank-independent-check-publication-final26-r2.json",
+        "evidenceSha256": "daa730bf22767da5d9e969d23b45359651f66077d6735c2e7732b1709307c833",
+        "independentPeer": {
+          "status": "passed",
+          "requiredScope": "Independent complete-bank/metadata/helper review and final26 source/engine composition.",
+          "recordedAt": "2026-10-04T18:58:14.583Z",
+          "scope": "Existing independent technical complete-bank/metadata/helper peer recorded after guarded source26 application. This status does not certify clinical eligibility, full instrument conformance, professional translation or source rights; no new arithmetic/browser execution is claimed by this metadata amendment.",
+          "previousStatus": {
+            "status": "pending",
+            "requiredScope": "Independent complete-bank/metadata/helper review and final26 source/engine composition."
+          },
+          "peer": {
+            "file": "reports/review-20261003/ppo-source-bank-root-peer-final26.json",
+            "sha256": "66a20738768d57347e2bbb0bd79360ba1fff1286d8628d6e9dd324ab690115a1",
+            "summary": {
+              "checks": 59772,
+              "failed": 0,
+              "sourceRows": 9720,
+              "uniqueInputObjects": 9716,
+              "duplicateRows": 4,
+              "sourceMethodsAfter": 138,
+              "sourceRowsAfter": 70585
+            },
+            "scope": "Independent root Fraction-derived source expectation objects were frozen before engine imports. All9720 stored inputs, exact nearest binary64 FEV/DLCO expectations and half-up whole displays compared to those frozen root objects, all137 other source-method objects preserved, all11 candidate pre/post SHA bindings checked. Fresh exact NodeVM/Chromium replay bound separately; no clinical/professional/full-method approval."
+          },
+          "application": {
+            "file": "reports/review-20261003/ppo-source-bank-evidence-application-final26.json",
+            "sha256": "0103689e1d2234f12c16f290e8463a51f7638cd40ffaee4f6fdbed37586a9c6d"
+          },
+          "reviewedBankScope": "9,720 retained source-equation scenarios (9,716 distinct stored input objects): exact nearest binary64 FEV1/DLCO outputs and exact positive half-up whole-percent display.9,287 segmental scenarios and433 measured-perfusion scenarios; four repeated inputs retained. No clinical risk/verdict, intervention eligibility, full surgical algorithm or licensed/professional translation approval.",
+          "currentBinding": {
+            "source26BankSha256": "52e1ccd833a0be0f16e6f61ccf1571df44ddee7bc2e59937ca1a371953bace53",
+            "implementations": [
+              {
+                "file": "apps/website/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+                "sha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec"
+              },
+              {
+                "file": "apps/dashboard/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+                "sha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec"
+              },
+              {
+                "file": "apps/command-center/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+                "sha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec"
+              }
+            ],
+            "subsequentReviewedRebinds": []
+          },
+          "originalFailuresAndScopeQualificationsPreserved": true,
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "fullMethodConformance": "not-performed"
+        },
+        "actualAdapterExecutions": 29160,
+        "actualVmExecutions": 29160,
+        "implementations": [
+          {
+            "app": "website",
+            "file": "apps/website/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+            "sha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec",
+            "candidatePath": "reports/review-20261003/ppo-source-rational-output-stage-final26-r3/apps/website/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+            "currentBeforeSha256": "33bfb202ee21e972d936572978b0b8d0d69321ad8feb136e407e7ba84bddad3b",
+            "scope": "Proposed R3 exact-rational source outputs. Application/source/metadata composition required before final packaging."
+          },
+          {
+            "app": "dashboard",
+            "file": "apps/dashboard/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+            "sha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec",
+            "candidatePath": "reports/review-20261003/ppo-source-rational-output-stage-final26-r3/apps/dashboard/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+            "currentBeforeSha256": "33bfb202ee21e972d936572978b0b8d0d69321ad8feb136e407e7ba84bddad3b",
+            "scope": "Proposed R3 exact-rational source outputs. Application/source/metadata composition required before final packaging."
+          },
+          {
+            "app": "command-center",
+            "file": "apps/command-center/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+            "sha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec",
+            "candidatePath": "reports/review-20261003/ppo-source-rational-output-stage-final26-r3/apps/command-center/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+            "currentBeforeSha256": "33bfb202ee21e972d936572978b0b8d0d69321ad8feb136e407e7ba84bddad3b",
+            "scope": "Proposed R3 exact-rational source outputs. Application/source/metadata composition required before final packaging."
+          }
+        ],
+        "qualifications": [
+          "9,720 retained source-equation scenarios (9,716 distinct stored input objects): exact nearest binary64 FEV1/DLCO outputs and exact positive half-up whole-percent display.9,287 segmental scenarios and433 measured-perfusion scenarios; four repeated inputs retained. No clinical risk/verdict, intervention eligibility, full surgical algorithm or licensed/professional translation approval.",
+          "Functioning segments are integer counts, not fractions. Clinical source context distinguishes initial segmental estimate from measured perfusion before pneumonectomy; no perfusion inferred from19segments.0/100% perfusion is a mathematical domain, not surgical eligibility.",
+          "Private level/verdict/rows/note and patient-specific cardiovascular/exercise/eligibility decisions are not checked or exposed by this public numeric bank. Missing DLCO remains incomplete.39 missing-FEV<30 nuances,46 unsupported-low old cases and276 old complete-boundary failures stay in separate historical source evidence.",
+          "594 original half-display input failures (2376 four-engine observations),7 rawsource4EPS input failures (56 observations), and12 earlier perfusion rounding failures remain in untouched historical reports. New exact-bit policy does not erase or broaden their criteria.",
+          "All862 existing source fixtures/tolerances/approval flags remain unchanged. Four inline examples are only a subset of this complete downloadable bank.",
+          "Final26 source/field/version/locale/UI composition, engine application, independent metadata/helper peer, fresh build/packages and221×10 browser journeys are required before publication."
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec",
+      "previousInputContract": {
+        "fields": [
+          {
+            "key": "vef1",
+            "label": "VEF₁ pré-operatório (pós-broncodilatador)",
+            "type": "num",
+            "min": 10,
+            "max": 150,
+            "unit": "% do previsto",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "dlco",
+            "label": "DLCO pré-operatória",
+            "type": "num",
+            "min": 10,
+            "max": 150,
+            "unit": "% do previsto",
+            "optional": true,
+            "options": null
+          },
+          {
+            "key": "seg",
+            "label": "Segmentos <strong>funcionantes</strong> que serão ressecados",
+            "type": "num",
+            "min": 1,
+            "max": 19,
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "obs",
+            "label": "Segmentos obstruídos (não funcionantes) no pulmão todo",
+            "type": "num",
+            "min": 0,
+            "max": 18,
+            "optional": true,
+            "options": null
+          }
+        ],
+        "hash": "ebc8b1404e54c7fab948dc9b906a29b31ae8e1bacdc9f74f5ffe6a82f7db3e73"
+      },
+      "sourceReading": {
+        "sources": [
+          {
+            "url": "https://scts.org/_userfiles/pages/files/guidelines/thoracic/ersests_clinical_guidelines_on_fitness_for_radical_therapy_in_lung_cancer_patients_surgery_and_chemoradiotherapy.pdf",
+            "file": "cardiopulmonary-primary-final26/ers-ests2009.pdf",
+            "sha256": "47d2b904a3c817310eeb286dd9e08ba0ae70cef8eb7b69143438aa0ac15a8722",
+            "sourceScope": "ERS/ESTS2009 PDF6/printed22, functioning segment T/R first estimate and pre-pneumonectomy measured perfusion fraction. Independently viewed this single rendered page, not full article; not a source approval of every clinical intervention."
+          },
+          {
+            "url": "https://pubmed.ncbi.nlm.nih.gov/23649437/",
+            "sourceScope": "Personally reopened original ACCP2013 bibliographic entry and Results abstract. Both>60%, either30–60%, either<30%; full article and2014correction content not read."
+          }
+        ],
+        "rootSourceProof": {
+          "file": "ppo-source-rational-output-root-check-final26-r3.json",
+          "sha256": "51d2679bb67c510c247bbd6370c10ea0231cae8256168c11fb000323845f9e67"
+        },
+        "independentEnginePeer": {
+          "file": "ppo-rational-output-independent-peer-final26-r3.json",
+          "sha256": "4f985e9de34784a24c83e24c55a7476baa7eb42e7f9eaea8899a708d9eb05e50"
+        },
+        "sourceRows": 9720,
+        "uniqueInputObjects": 9716,
+        "duplicateRows": 4
+      }
+    },
+    "limits": "Estimativa para avaliação funcional de candidatos a ressecção pulmonar, com valores pré-operatórios em percentagem do previsto. Escolha o método compatível com a intervenção: contagem segmentar como estimativa inicial; na pneumonectomia, informe a perfusão medida do pulmão a ressecar. Não se deduz perfusão a partir de 19 segmentos. Informe segmentos como contagens inteiras; a contagem a ressecar não pode superar 19 menos os obstruídos. Perfusão de 0–100% é o domínio matemático da implementação; 0% e 100% não demonstram elegibilidade cirúrgica. Sem DLCO, apenas VEF₁ parcial e avaliação incompleta. Algoritmos cardiovasculares, testes de exercício, correção de 2014 e artigo ACCP integral não foram conferidos neste lote. A fonte ERS/ESTS 2009 foi lida nesta página específica; a fonte ACCP 2013, no resumo. Revisão clínica e tradução profissional não realizadas.",
+    "sourceLimitEvidence": {
+      "status": "limited-source-formulas-and-domain-recorded",
+      "checkedAt": "2026-10-04",
+      "sourceReading": [
+        {
+          "url": "https://scts.org/_userfiles/pages/files/guidelines/thoracic/ersests_clinical_guidelines_on_fitness_for_radical_therapy_in_lung_cancer_patients_surgery_and_chemoradiotherapy.pdf",
+          "file": "cardiopulmonary-primary-final26/ers-ests2009.pdf",
+          "sha256": "47d2b904a3c817310eeb286dd9e08ba0ae70cef8eb7b69143438aa0ac15a8722",
+          "sourceScope": "ERS/ESTS2009 PDF6/printed22, functioning segment T/R first estimate and pre-pneumonectomy measured perfusion fraction. Independently viewed this single rendered page, not full article; not a source approval of every clinical intervention."
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23649437/",
+          "sourceScope": "Personally reopened original ACCP2013 bibliographic entry and Results abstract. Both>60%, either30–60%, either<30%; full article and2014correction content not read."
+        }
+      ],
+      "limitations": "Estimativa para avaliação funcional de candidatos a ressecção pulmonar, com valores pré-operatórios em percentagem do previsto. Escolha o método compatível com a intervenção: contagem segmentar como estimativa inicial; na pneumonectomia, informe a perfusão medida do pulmão a ressecar. Não se deduz perfusão a partir de 19 segmentos. Informe segmentos como contagens inteiras; a contagem a ressecar não pode superar 19 menos os obstruídos. Perfusão de 0–100% é o domínio matemático da implementação; 0% e 100% não demonstram elegibilidade cirúrgica. Sem DLCO, apenas VEF₁ parcial e avaliação incompleta. Algoritmos cardiovasculares, testes de exercício, correção de 2014 e artigo ACCP integral não foram conferidos neste lote. A fonte ERS/ESTS 2009 foi lida nesta página específica; a fonte ACCP 2013, no resumo. Revisão clínica e tradução profissional não realizadas.",
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed"
+    },
+    "previousImplementationVersion": "vef1-dlco-pos-operatorio@native-2026-10-03+33bfb202ee21",
+    "fixtureAmendments": [
+      {
+        "index": 2,
+        "kind": "source-scenario-caption",
+        "before": "Pneumonectomia esquerda (9), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%",
+        "after": "Estimativa segmentar inicial (9 segmentos funcionantes a ressecar), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%; não substitui perfusão medida na pneumonectomia",
+        "reason": "Nine functioning segments alone do not establish measured perfusion for pneumonectomy."
+      },
+      {
+        "index": 3,
+        "kind": "incomplete-assessment-policy",
+        "before": [
+          "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%: 49,4%",
+          {
+            "vef1": 70,
+            "seg": 5,
+            "obs": 2
+          },
+          {
+            "raw": {
+              "fev": 49.41
+            },
+            "level": "mid"
+          }
+        ],
+        "after": [
+          "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%, DLCO não informada: VEF₁ parcial de 49,4%; avaliação incompleta",
+          {
+            "vef1": 70,
+            "seg": 5,
+            "obs": 2
+          },
+          {
+            "raw": {
+              "fev": 49.41
+            },
+            "level": "info"
+          }
+        ],
+        "reason": "MissingDLCO cannot establish complete low/intermediate risk; numeric input/expected FEV unchanged."
+      }
+    ]
+  },
+  "currentSource": {
+    "file": "apps/website/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+    "bytes": 10503,
+    "sha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec"
+  },
+  "sourceToolSha256": "5c49824e02ae2ccbe9bdd1c2350180e8eb0c8de5c3483a51031843ab387dd790",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 4,
+      "sha256": "1fb46f53482db3d58fd183737764ce7f8f60732ccbba360f0b2e68769600cb4f",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 4,
+      "sha256": "1fb46f53482db3d58fd183737764ce7f8f60732ccbba360f0b2e68769600cb4f",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
     }
-  },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
-  },
-  "clinicalValidation": "not-performed"
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

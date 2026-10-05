@@ -1,0 +1,98 @@
+<!-- ELUCENIA technical documentation · vef1-dlco-pos-operatorio · ja · no clinical/professional/rights approval -->
+
+# 予測術後FEV₁・DLCO
+
+[条件・出典・許諾](https://elucenia.org/ja/tools/vef1-dlco-pos-operatorio)
+
+## 使い方
+
+ポータルでツールを使用するか、ローカルHTTPサーバー経由でindex.htmlを開いてください。言語を選択し、項目を入力して計算してください。
+
+## 入力項目と単位
+
+### 推定方法
+
+`mode`
+
+任意
+
+- `segmental` — 機能している肺区域の数
+- `perfusion` — 測定された肺血流
+
+### 術前FEV₁（気管支拡張薬後）
+
+`vef1`
+
+%予測値 · 範囲: 10–150
+
+### 術前DLCO
+
+`dlco`
+
+%予測値 · 任意 · 範囲: 10–150
+
+### 切除予定の機能している肺区域
+
+`seg`
+
+任意 · 範囲: 1–19
+
+### 肺全体の閉塞した（非機能）区域
+
+`obs`
+
+任意 · 範囲: 0–18
+
+### 切除予定の肺の血流
+
+`perfusao`
+
+総肺血流に対する割合（%） · 任意 · 範囲: 0–100
+
+## 方法の版
+
+ERS/ESTS 2009、22ページ：機能している肺区域による初期推定と、実測肺血流比率を用いる肺全摘前の式。ACCP 2013の抄録の閾値は、両方\>60%、いずれかが30–60%、いずれかが\<30%。完全な臨床的適合性は確認していません
+
+## 記載された計算式
+
+区域数によるモード：PPO = 術前値 × (1 − y/z)。yは切除予定の機能している肺区域数、z = 19から閉塞区域数を引いた数です。区域数は整数で入力し、yはzを超えてはいけません。
+
+肺血流によるモード：PPO = 術前値 × (1 − P/100)。Pは切除予定の肺が総肺血流に占める実測百分率です。この割合を区域数から推定することはありません。
+
+この式をFEV₁とDLCOに別々に適用します。DLCOがなければFEV₁のみの部分的な計算となり、評価は不完全なままです。臨床的な介入と評価方針の選択には専門家による確認が必要です。
+
+## 限界・対象集団
+
+肺切除候補者の機能評価のための推定で、術前値は予測値に対する百分率で示します。介入に適した方法を選択してください。区域数による計算は初期推定であり、肺全摘術では切除予定の肺の実測血流を入力します。19区域から肺血流を推定することはありません。区域数は整数で入力し、切除予定数は19から閉塞区域数を引いた数を超えてはいけません。血流0–100%は本実装の数学的定義域であり、0%と100%は手術適応を証明しません。DLCOがなければFEV₁のみの部分的な計算となり、評価は不完全です。このロットでは心血管評価アルゴリズム、運動試験、2014年の訂正、ACCP論文の全文は確認していません。ERS/ESTS 2009はこの特定ページのみ、ACCP 2013は抄録のみを読みました。臨床レビューおよび専門家による翻訳は行っていません。
+
+## 参考文献
+
+- [Brunelli A et al. Physiologic evaluation of the patient with lung cancer being considered for resectional surgery: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest, 2013.](https://doi.org/10.1378/chest.12-2395)
+
+- [Brunelli A et al. ERS/ESTS clinical guidelines on fitness for radical therapy in lung cancer patients (surgery and chemo-radiotherapy). Eur Respir J, 2009.](https://doi.org/10.1183/09031936.00184308)
+
+## 技術テストの再現
+
+このリポジトリのルートディレクトリでnode test.cjsを実行すると、記録された合成ケースを再実行できます。元の入力、期待結果、許容誤差は保持されています。技術テストは臨床的検証を意味しません。
+
+```sh
+node test.cjs
+```
+
+tool.jsonには出典、版、確認範囲が記録されています。examples.jsonには合成入力と期待結果が保持され、results.jsonには実際に得られた結果が記録されています。
+
+[記録・参考文献](../tool.json) · [JavaScriptコード](../calculator.js) · [参照ケース](../examples.json) · [results.json](../results.json)
+
+## 確認状況と使用条件
+
+独立した臨床レビューは実施されていません。
+
+このインターフェースは独自に作成した翻訳であり、公式版や認証済みの版ではありません。独立した臨床レビュー、専門家による言語レビュー、評価尺度等の権利許諾の確認は実施されていません。
+
+式または分類の結果です。解釈、対応、適用可能性は専門家による評価と選択した出典に依存します。
+
+## ライセンスと帰属表示
+
+Apache-2.0はELUCENIAのコードにのみ適用されます。評価尺度等、出版物、翻訳、データの権利は、それぞれの権利者に帰属します。LICENSEとNOTICEを保持してください。
+
+ELUCENIA · Felipe Guedes · Copyright © 2026

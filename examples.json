@@ -1,6 +1,14 @@
 [
   {
-    "label": "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+    "id": "vef1-dlco-pos-operatorio",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+    "originalInput": {
+      "vef1": 90,
+      "dlco": 85,
+      "seg": 2
+    },
     "input": {
       "vef1": 90,
       "dlco": 85,
@@ -13,15 +21,36 @@
       },
       "level": "low"
     },
-    "originalInput": {
-      "vef1": 90,
-      "dlco": 85,
-      "seg": 2
+    "recordedResult": {
+      "main": [
+        "76",
+        "%"
+      ],
+      "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+      "raw": {
+        "fev": 80.52631578947368,
+        "dlco": 76.05263157894737
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+    "id": "vef1-dlco-pos-operatorio",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+    "originalInput": {
+      "vef1": 80,
+      "dlco": 75,
+      "seg": 5
+    },
     "input": {
       "vef1": 80,
       "dlco": 75,
@@ -35,15 +64,36 @@
       "level": "mid",
       "main": "55"
     },
-    "originalInput": {
-      "vef1": 80,
-      "dlco": 75,
-      "seg": 5
+    "recordedResult": {
+      "main": [
+        "55",
+        "%"
+      ],
+      "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+      "raw": {
+        "fev": 58.94736842105263,
+        "dlco": 55.26315789473684
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Pneumonectomia esquerda (9), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%",
+    "id": "vef1-dlco-pos-operatorio",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Estimativa segmentar inicial (9 segmentos funcionantes a ressecar), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%; não substitui perfusão medida na pneumonectomia",
+    "originalInput": {
+      "vef1": 50,
+      "dlco": 55,
+      "seg": 9
+    },
     "input": {
       "vef1": 50,
       "dlco": 55,
@@ -56,15 +106,36 @@
       },
       "level": "high"
     },
-    "originalInput": {
-      "vef1": 50,
-      "dlco": 55,
-      "seg": 9
+    "recordedResult": {
+      "main": [
+        "26",
+        "%"
+      ],
+      "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+      "raw": {
+        "fev": 26.31578947368421,
+        "dlco": 28.94736842105263
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%: 49,4%",
+    "id": "vef1-dlco-pos-operatorio",
+    "kind": "native-source-reference",
+    "index": 3,
+    "name": "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%, DLCO não informada: VEF₁ parcial de 49,4%; avaliação incompleta",
+    "originalInput": {
+      "vef1": 70,
+      "seg": 5,
+      "obs": 2
+    },
     "input": {
       "vef1": 70,
       "seg": 5,
@@ -74,17 +145,38 @@
       "raw": {
         "fev": 49.41
       },
-      "level": "mid"
+      "level": "info"
     },
-    "originalInput": {
-      "vef1": 70,
-      "seg": 5,
-      "obs": 2
+    "recordedResult": {
+      "main": [
+        "49",
+        "%"
+      ],
+      "label": "VEF₁ parcial: DLCO não informada",
+      "raw": {
+        "fev": 49.411764705882355,
+        "dlco": null
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "18 segmentos com 2 obstruídos: inválido",
+    "id": "vef1-dlco-pos-operatorio",
+    "kind": "native-source-reference",
+    "index": 4,
+    "name": "18 segmentos com 2 obstruídos: inválido",
+    "originalInput": {
+      "vef1": 70,
+      "seg": 18,
+      "obs": 2
+    },
     "input": {
       "vef1": 70,
       "seg": 18,
@@ -93,11 +185,16 @@
     "expected": {
       "error": true
     },
-    "originalInput": {
-      "vef1": 70,
-      "seg": 18,
-      "obs": 2
+    "recordedResult": {
+      "error": "Os segmentos a ressecar não podem passar do total de segmentos funcionantes (19 menos os obstruídos)."
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]
