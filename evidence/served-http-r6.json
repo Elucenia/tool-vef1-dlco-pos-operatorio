@@ -1,0 +1,992 @@
+{
+  "schema": "elucenia-native-tool-actual-r6-local-HTTP-subset-r5",
+  "id": "vef1-dlco-pos-operatorio",
+  "sourceReceipt": {
+    "file": "reports/review-20261005-completion/deploy-lock/r6-all-calculators-http-results.json",
+    "bytes": 7105396,
+    "sha256": "c0b1e4dc320ce807e78c0444e629c1269b545b6e2ac87c265d896073d8c34ecb"
+  },
+  "servedBuildId": "jN-2wbRrarMjYPwdPnRHh",
+  "checker": {
+    "file": "reports/review-20261005-completion/deploy-lock/verify-r6-all-calculators-http.cjs",
+    "sha256": "92411a9e01fe36e1bf380c3336f2171bdb523a02ff09683da75927b12b33b3fa",
+    "bytes": 20735
+  },
+  "health": {
+    "url": "http://127.0.0.1:3067/api/health",
+    "startedAt": "2026-10-05T17:35:43.039Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json",
+      "retryAfter": null,
+      "cacheControl": "no-store",
+      "nosniff": "nosniff"
+    },
+    "body": {
+      "status": "ok",
+      "application": "ELUCENIA",
+      "framework": "Next.js",
+      "version": "1.0.0"
+    },
+    "responseSha256": "65f95645e7826371eb2d9d3f96e0fed52ea4b88c77203f0cf2511769e57cd108",
+    "bytes": 80,
+    "elapsedMs": 27.345699999999994
+  },
+  "identity": {
+    "url": "http://127.0.0.1:3067/_next/data/jN-2wbRrarMjYPwdPnRHh/en/tools.json",
+    "startedAt": "2026-10-05T17:35:43.068Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "cacheControl": "s-maxage=31536000",
+      "nosniff": "nosniff"
+    },
+    "responseSha256": "404601e2c283a588a2f41af4feb5113d1993f76cc22f73a7b8ef4f5d17a82fa8",
+    "bytes": 103853,
+    "elapsedMs": 14.542600000000007,
+    "semanticMatchWithCompiledCatalog": true
+  },
+  "sourceCalculator": {
+    "file": "deliveries/elucenia-next-hostinger-r6/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
+    "sha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec",
+    "bytes": 10503
+  },
+  "sourceCalculatorMatchesCurrentCandidate": true,
+  "toolStatus": {
+    "cases": 5,
+    "replayed": 5,
+    "passed": 5,
+    "failed": 0,
+    "status": "passed"
+  },
+  "cases": [
+    {
+      "id": "vef1-dlco-pos-operatorio",
+      "kind": "native-source-reference",
+      "index": 0,
+      "name": "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+      "originalInput": {
+        "vef1": 90,
+        "dlco": 85,
+        "seg": 2
+      },
+      "input": {
+        "vef1": 90,
+        "dlco": 85,
+        "seg": 2
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "fev": 80.53,
+          "dlco": 76.05
+        },
+        "level": "low"
+      },
+      "recordedResult": {
+        "main": [
+          "76",
+          "%"
+        ],
+        "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+        "raw": {
+          "fev": 80.52631578947368,
+          "dlco": 76.05263157894737
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/vef1-dlco-pos-operatorio/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "vef1": 90,
+            "dlco": 85,
+            "seg": 2
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/vef1-dlco-pos-operatorio/calculate",
+          "startedAt": "2026-10-05T17:39:59.263Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "vef1-dlco-pos-operatorio",
+              "main": [
+                "76",
+                "%"
+              ],
+              "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+              "raw": {
+                "fev": 80.52631578947368,
+                "dlco": 76.05263157894737
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "dcc3bc25db00e663b5187e6bfd89666dbd6cd8ac421c9e2744498543b35c9f03",
+          "bytes": 221,
+          "elapsedMs": 6.210800000000745
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/vef1-dlco-pos-operatorio/calculate",
+        "startedAt": "2026-10-05T17:39:59.263Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "vef1-dlco-pos-operatorio",
+            "main": [
+              "76",
+              "%"
+            ],
+            "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+            "raw": {
+              "fev": 80.52631578947368,
+              "dlco": 76.05263157894737
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "dcc3bc25db00e663b5187e6bfd89666dbd6cd8ac421c9e2744498543b35c9f03",
+        "bytes": 221,
+        "elapsedMs": 6.210800000000745
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.fev",
+            "expected": 80.53,
+            "obtained": 80.52631578947368,
+            "tolerance": 0.00500001,
+            "difference": 0.0036842105263161784,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.dlco",
+            "expected": 76.05,
+            "obtained": 76.05263157894737,
+            "tolerance": 0.00500001,
+            "difference": 0.002631578947372759,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.fev",
+            "expected": 80.52631578947368,
+            "obtained": 80.52631578947368,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.dlco",
+            "expected": 76.05263157894737,
+            "obtained": 76.05263157894737,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "76",
+            "obtained": "76",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "%",
+            "obtained": "%",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "vef1-dlco-pos-operatorio",
+      "kind": "native-source-reference",
+      "index": 1,
+      "name": "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+      "originalInput": {
+        "vef1": 80,
+        "dlco": 75,
+        "seg": 5
+      },
+      "input": {
+        "vef1": 80,
+        "dlco": 75,
+        "seg": 5
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "fev": 58.95,
+          "dlco": 55.26
+        },
+        "level": "mid",
+        "main": "55"
+      },
+      "recordedResult": {
+        "main": [
+          "55",
+          "%"
+        ],
+        "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+        "raw": {
+          "fev": 58.94736842105263,
+          "dlco": 55.26315789473684
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/vef1-dlco-pos-operatorio/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "vef1": 80,
+            "dlco": 75,
+            "seg": 5
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/vef1-dlco-pos-operatorio/calculate",
+          "startedAt": "2026-10-05T17:39:59.578Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "vef1-dlco-pos-operatorio",
+              "main": [
+                "55",
+                "%"
+              ],
+              "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+              "raw": {
+                "fev": 58.94736842105263,
+                "dlco": 55.26315789473684
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "21f0eb9b139c1e57c38ffbcb13c5a6b572dbd0ec06b2de9e6daf656adf166235",
+          "bytes": 221,
+          "elapsedMs": 3.0701000000117347
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/vef1-dlco-pos-operatorio/calculate",
+        "startedAt": "2026-10-05T17:39:59.578Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "vef1-dlco-pos-operatorio",
+            "main": [
+              "55",
+              "%"
+            ],
+            "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+            "raw": {
+              "fev": 58.94736842105263,
+              "dlco": 55.26315789473684
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "21f0eb9b139c1e57c38ffbcb13c5a6b572dbd0ec06b2de9e6daf656adf166235",
+        "bytes": 221,
+        "elapsedMs": 3.0701000000117347
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "55",
+            "obtained": "55",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.fev",
+            "expected": 58.95,
+            "obtained": 58.94736842105263,
+            "tolerance": 0.00500001,
+            "difference": 0.002631578947372759,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.dlco",
+            "expected": 55.26,
+            "obtained": 55.26315789473684,
+            "tolerance": 0.00500001,
+            "difference": 0.0031578947368444688,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.fev",
+            "expected": 58.94736842105263,
+            "obtained": 58.94736842105263,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.dlco",
+            "expected": 55.26315789473684,
+            "obtained": 55.26315789473684,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "55",
+            "obtained": "55",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "%",
+            "obtained": "%",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "vef1-dlco-pos-operatorio",
+      "kind": "native-source-reference",
+      "index": 2,
+      "name": "Estimativa segmentar inicial (9 segmentos funcionantes a ressecar), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%; não substitui perfusão medida na pneumonectomia",
+      "originalInput": {
+        "vef1": 50,
+        "dlco": 55,
+        "seg": 9
+      },
+      "input": {
+        "vef1": 50,
+        "dlco": 55,
+        "seg": 9
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "fev": 26.32,
+          "dlco": 28.95
+        },
+        "level": "high"
+      },
+      "recordedResult": {
+        "main": [
+          "26",
+          "%"
+        ],
+        "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+        "raw": {
+          "fev": 26.31578947368421,
+          "dlco": 28.94736842105263
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/vef1-dlco-pos-operatorio/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "vef1": 50,
+            "dlco": 55,
+            "seg": 9
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/vef1-dlco-pos-operatorio/calculate",
+          "startedAt": "2026-10-05T17:39:59.889Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "vef1-dlco-pos-operatorio",
+              "main": [
+                "26",
+                "%"
+              ],
+              "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+              "raw": {
+                "fev": 26.31578947368421,
+                "dlco": 28.94736842105263
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "a62bf18e37eacd182ec6b0bd831b751e8919753b28b9132d9eab1f46b40c0aed",
+          "bytes": 221,
+          "elapsedMs": 2.7639000000199303
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/vef1-dlco-pos-operatorio/calculate",
+        "startedAt": "2026-10-05T17:39:59.889Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "vef1-dlco-pos-operatorio",
+            "main": [
+              "26",
+              "%"
+            ],
+            "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+            "raw": {
+              "fev": 26.31578947368421,
+              "dlco": 28.94736842105263
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "a62bf18e37eacd182ec6b0bd831b751e8919753b28b9132d9eab1f46b40c0aed",
+        "bytes": 221,
+        "elapsedMs": 2.7639000000199303
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.fev",
+            "expected": 26.32,
+            "obtained": 26.31578947368421,
+            "tolerance": 0.00500001,
+            "difference": 0.004210526315791441,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.dlco",
+            "expected": 28.95,
+            "obtained": 28.94736842105263,
+            "tolerance": 0.00500001,
+            "difference": 0.0026315789473692064,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.fev",
+            "expected": 26.31578947368421,
+            "obtained": 26.31578947368421,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.dlco",
+            "expected": 28.94736842105263,
+            "obtained": 28.94736842105263,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "26",
+            "obtained": "26",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "%",
+            "obtained": "%",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "vef1-dlco-pos-operatorio",
+      "kind": "native-source-reference",
+      "index": 3,
+      "name": "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%, DLCO não informada: VEF₁ parcial de 49,4%; avaliação incompleta",
+      "originalInput": {
+        "vef1": 70,
+        "seg": 5,
+        "obs": 2
+      },
+      "input": {
+        "vef1": 70,
+        "seg": 5,
+        "obs": 2
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "fev": 49.41
+        },
+        "level": "info"
+      },
+      "recordedResult": {
+        "main": [
+          "49",
+          "%"
+        ],
+        "label": "VEF₁ parcial: DLCO não informada",
+        "raw": {
+          "fev": 49.411764705882355,
+          "dlco": null
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/vef1-dlco-pos-operatorio/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "vef1": 70,
+            "seg": 5,
+            "obs": 2
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/vef1-dlco-pos-operatorio/calculate",
+          "startedAt": "2026-10-05T17:40:00.201Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "vef1-dlco-pos-operatorio",
+              "main": [
+                "49",
+                "%"
+              ],
+              "label": "VEF₁ parcial: DLCO não informada",
+              "raw": {
+                "fev": 49.411764705882355,
+                "dlco": null
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "2700a87ce9b16507614f83a5c8644b1769032d2ff4b44f720593d31796e5d181",
+          "bytes": 190,
+          "elapsedMs": 2.667699999990873
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/vef1-dlco-pos-operatorio/calculate",
+        "startedAt": "2026-10-05T17:40:00.201Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "vef1-dlco-pos-operatorio",
+            "main": [
+              "49",
+              "%"
+            ],
+            "label": "VEF₁ parcial: DLCO não informada",
+            "raw": {
+              "fev": 49.411764705882355,
+              "dlco": null
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "2700a87ce9b16507614f83a5c8644b1769032d2ff4b44f720593d31796e5d181",
+        "bytes": 190,
+        "elapsedMs": 2.667699999990873
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.fev",
+            "expected": 49.41,
+            "obtained": 49.411764705882355,
+            "tolerance": 0.00500001,
+            "difference": 0.0017647058823584416,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.fev",
+            "expected": 49.411764705882355,
+            "obtained": 49.411764705882355,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.dlco",
+            "expected": null,
+            "obtained": null,
+            "scope": "Existing source-audit transport regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "49",
+            "obtained": "49",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "%",
+            "obtained": "%",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "vef1-dlco-pos-operatorio",
+      "kind": "native-source-reference",
+      "index": 4,
+      "name": "18 segmentos com 2 obstruídos: inválido",
+      "originalInput": {
+        "vef1": 70,
+        "seg": 18,
+        "obs": 2
+      },
+      "input": {
+        "vef1": 70,
+        "seg": 18,
+        "obs": 2
+      },
+      "amendments": [],
+      "expected": {
+        "error": true
+      },
+      "recordedResult": {
+        "error": "Os segmentos a ressecar não podem passar do total de segmentos funcionantes (19 menos os obstruídos)."
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/vef1-dlco-pos-operatorio/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "vef1": 70,
+            "seg": 18,
+            "obs": 2
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/vef1-dlco-pos-operatorio/calculate",
+          "startedAt": "2026-10-05T17:40:00.513Z",
+          "status": 422,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "error": "Os segmentos a ressecar não podem passar do total de segmentos funcionantes (19 menos os obstruídos).",
+            "code": "FORMULA_DOMAIN"
+          },
+          "responseSha256": "c22300e583db2acb6c505843d947d6ca55a298f7504aa97cb381361d11c69827",
+          "bytes": 139,
+          "elapsedMs": 5.554999999993015
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/vef1-dlco-pos-operatorio/calculate",
+        "startedAt": "2026-10-05T17:40:00.513Z",
+        "status": 422,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "error": "Os segmentos a ressecar não podem passar do total de segmentos funcionantes (19 menos os obstruídos).",
+          "code": "FORMULA_DOMAIN"
+        },
+        "responseSha256": "c22300e583db2acb6c505843d947d6ca55a298f7504aa97cb381361d11c69827",
+        "bytes": 139,
+        "elapsedMs": 5.554999999993015
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "recorded-rejection",
+            "expected": "4xx with error and no result",
+            "obtained": {
+              "status": 422,
+              "error": "Os segmentos a ressecar não podem passar do total de segmentos funcionantes (19 menos os obstruídos).",
+              "result": false
+            },
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    }
+  ],
+  "scope": {
+    "syntheticDataOnly": true,
+    "applicationModuleImports": 0,
+    "browserInteractions": 0,
+    "newIndependentOracles": 0,
+    "nativeSourceReferenceCases": 882,
+    "additionalDecimalCases": 4,
+    "predictProstateHasSeparateFullCurveOracleReplay": true,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "populationValidation": false,
+    "hostingerDeploymentVerified": false,
+    "actualHTTPExecution": true,
+    "standaloneNodeServer": true,
+    "nodeVersion": "v22.18.0",
+    "noNewClinicalOrProfessionalApproval": true,
+    "pubmedResourceIsNotCalculatorAndNotIncludedIn222": true,
+    "description": "All 882 existing reference cases across the 218 native calculators plus four existing Decimal50 examples, executed via HTTP against the final local r6 standalone build. Raw precise source-audit comparisons are transport regressions, not independent clinical or full-method validation."
+  },
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false,
+  "newIndependentOracle": false,
+  "actualBrowserJourney": false,
+  "hostingerDeploymentVerified": false
+}
