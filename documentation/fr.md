@@ -96,3 +96,53 @@ Résultat de la formule ou de la classification. L’interprétation, la conduit
 Apache-2.0 s’applique uniquement au code d’ELUCENIA. Les droits sur les instruments, publications, traductions et données restent ceux de leurs titulaires respectifs. Conservez LICENSE et NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Résultats documentés
+
+Les informations ci-dessous conservent les sorties de la méthode pour des exemples synthétiques. Elles ne constituent pas une validation clinique indépendante.
+
+### 1
+
+Risque faible : chirurgie sans examens complémentaires (VEMSppo et DLCOppo > 60%)
+
+| Détails du résultat | |
+| --- | --- |
+| VEMSppo | 80,5% |
+| DLCOppo | 76,1% |
+| Fraction de fonction préservée | 89,5 % (17 sur 19 segments) |
+
+
+### 2
+
+Risque accru : effectuer un test d’effort simple (escaliers ou shuttle walk)
+
+| Détails du résultat | |
+| --- | --- |
+| VEMSppo | 58,9% |
+| DLCOppo | 55,3% |
+| Fraction de fonction préservée | 73,7 % (14 sur 19 segments) |
+
+
+### 3
+
+Risque élevé : effectuer une épreuve d’effort cardiopulmonaire (VO₂ max.)
+
+| Détails du résultat | |
+| --- | --- |
+| VEMSppo | 26,3% |
+| DLCOppo | 28,9% |
+| Fraction de fonction préservée | 52,6 % (10 sur 19 segments) |
+
+
+### 4
+
+Évaluation incomplète : DLCO non rapportée. Le VEMSppo isolé n’établit pas un faible risque. Si VEMSppo <30%, le résumé ACCP 2013 indique déjà une épreuve d’effort cardiopulmonaire ; l’évaluation globale reste incomplète.
+
+| Détails du résultat | |
+| --- | --- |
+| VEMSppo | 49,4% |
+| DLCOppo | non rapporté |
+| Fraction de fonction préservée | 70,6 % (12 sur 17 segments) |
+
+L’ACCP recommande de mesurer la DLCO chez tous les candidats à une résection, même avec un VEMS normal.
+

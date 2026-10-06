@@ -96,3 +96,53 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+Low risk: surgery without additional testing (ppo FEV₁ and ppo DLCO > 60%)
+
+| Result details | |
+| --- | --- |
+| ppo FEV₁ | 80.5% |
+| ppo DLCO | 76.1% |
+| Fraction of preserved function | 89.5% (17 of 19 segments) |
+
+
+### 2
+
+Increased risk: perform a simple exercise test (stairs or shuttle walk)
+
+| Result details | |
+| --- | --- |
+| ppo FEV₁ | 58.9% |
+| ppo DLCO | 55.3% |
+| Fraction of preserved function | 73.7% (14 of 19 segments) |
+
+
+### 3
+
+High risk: perform cardiopulmonary exercise testing (max VO₂)
+
+| Result details | |
+| --- | --- |
+| ppo FEV₁ | 26.3% |
+| ppo DLCO | 28.9% |
+| Fraction of preserved function | 52.6% (10 of 19 segments) |
+
+
+### 4
+
+Incomplete assessment: DLCO not reported. Isolated ppo FEV₁ does not establish low risk. If ppo FEV₁ <30%, the ACCP 2013 summary already indicates cardiopulmonary exercise testing; the overall assessment remains incomplete.
+
+| Result details | |
+| --- | --- |
+| ppo FEV₁ | 49.4% |
+| ppo DLCO | not reported |
+| Fraction of preserved function | 70.6% (12 of 17 segments) |
+
+ACCP recommends measuring DLCO in all candidates for resection, even with normal FEV₁.
+

@@ -96,3 +96,53 @@ Ergebnis der Formel oder Klassifikation. Interpretation, Vorgehen und Anwendbark
 Apache-2.0 gilt nur für den ELUCENIA-Code. Die Rechte an Instrumenten, Veröffentlichungen, Übersetzungen und Daten verbleiben bei den jeweiligen Rechteinhabern. Bewahren Sie LICENSE und NOTICE auf.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Dokumentierte Ergebnisse
+
+Die folgenden Angaben bewahren die Ausgaben der Methode für synthetische Beispiele. Sie stellen keine unabhängige klinische Validierung dar.
+
+### 1
+
+Niedriges Risiko: Operation ohne zusätzliche Tests (ppo-FEV₁ und ppo-DLCO > 60%)
+
+| Ergebnisdetails | |
+| --- | --- |
+| ppo-FEV₁ | 80,5% |
+| ppo-DLCO | 76,1% |
+| Anteil der erhaltenen Funktion | 89,5 % (17 von 19 Segmenten) |
+
+
+### 2
+
+Erhöhtes Risiko: einfachen Belastungstest durchführen (Treppensteigen oder Shuttle-Walk-Test)
+
+| Ergebnisdetails | |
+| --- | --- |
+| ppo-FEV₁ | 58,9% |
+| ppo-DLCO | 55,3% |
+| Anteil der erhaltenen Funktion | 73,7 % (14 von 19 Segmenten) |
+
+
+### 3
+
+Hohes Risiko: kardiopulmonale Belastungsuntersuchung durchführen (max. VO₂)
+
+| Ergebnisdetails | |
+| --- | --- |
+| ppo-FEV₁ | 26,3% |
+| ppo-DLCO | 28,9% |
+| Anteil der erhaltenen Funktion | 52,6 % (10 von 19 Segmenten) |
+
+
+### 4
+
+Unvollständige Beurteilung: DLCO nicht angegeben. Ein isolierter ppo-FEV₁ begründet kein niedriges Risiko. Wenn ppo-FEV₁ <30%, weist die ACCP-Zusammenfassung 2013 bereits auf eine kardiopulmonale Belastungsuntersuchung hin; die Gesamtbeurteilung bleibt unvollständig.
+
+| Ergebnisdetails | |
+| --- | --- |
+| ppo-FEV₁ | 49,4% |
+| ppo-DLCO | nicht angegeben |
+| Anteil der erhaltenen Funktion | 70,6 % (12 von 17 Segmenten) |
+
+Die ACCP empfiehlt, bei allen Resektionskandidaten die DLCO zu messen, auch bei normalem FEV₁.
+

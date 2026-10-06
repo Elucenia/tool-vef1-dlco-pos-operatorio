@@ -1,0 +1,315 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "vef1-dlco-pos-operatorio",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "9410fbec2b6e69a392749d0c1fe30ea3b6303c10",
+    "oldEngineSha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec",
+    "currentEngineSha256": "f82b8e546c1d2f7710f9a2a12b42dc65e86aacab6f2015ea5720d10034f7b9b8"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+      "input": {
+        "vef1": 90,
+        "dlco": 85,
+        "seg": 2
+      },
+      "publicOutput": {
+        "id": "vef1-dlco-pos-operatorio",
+        "main": [
+          "76",
+          "%"
+        ],
+        "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+        "raw": {
+          "fev": 80.52631578947368,
+          "dlco": 76.05263157894737
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "fev": 80.53,
+          "dlco": 76.05
+        },
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "76",
+          "%"
+        ],
+        "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+        "level": "low",
+        "verdict": "Baixo risco: cirurgia sem testes adicionais (VEF₁ppo e DLCOppo &gt; 60%)",
+        "rows": [
+          [
+            "VEF₁ppo",
+            "80,5%"
+          ],
+          [
+            "DLCOppo",
+            "76,1%"
+          ],
+          [
+            "Fração de função preservada",
+            "89,5% (17 de 19 segmentos)"
+          ]
+        ],
+        "note": "",
+        "raw": {
+          "fev": 80.52631578947368,
+          "dlco": 76.05263157894737
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+      "input": {
+        "vef1": 80,
+        "dlco": 75,
+        "seg": 5
+      },
+      "publicOutput": {
+        "id": "vef1-dlco-pos-operatorio",
+        "main": [
+          "55",
+          "%"
+        ],
+        "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+        "raw": {
+          "fev": 58.94736842105263,
+          "dlco": 55.26315789473684
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "fev": 58.95,
+          "dlco": 55.26
+        },
+        "level": "mid",
+        "main": "55"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "55",
+          "%"
+        ],
+        "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+        "level": "mid",
+        "verdict": "Risco aumentado: fazer teste de exercício simples (escada ou shuttle walk)",
+        "rows": [
+          [
+            "VEF₁ppo",
+            "58,9%"
+          ],
+          [
+            "DLCOppo",
+            "55,3%"
+          ],
+          [
+            "Fração de função preservada",
+            "73,7% (14 de 19 segmentos)"
+          ]
+        ],
+        "note": "",
+        "raw": {
+          "fev": 58.94736842105263,
+          "dlco": 55.26315789473684
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "Estimativa segmentar inicial (9 segmentos funcionantes a ressecar), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%; não substitui perfusão medida na pneumonectomia",
+      "input": {
+        "vef1": 50,
+        "dlco": 55,
+        "seg": 9
+      },
+      "publicOutput": {
+        "id": "vef1-dlco-pos-operatorio",
+        "main": [
+          "26",
+          "%"
+        ],
+        "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+        "raw": {
+          "fev": 26.31578947368421,
+          "dlco": 28.94736842105263
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "fev": 26.32,
+          "dlco": 28.95
+        },
+        "level": "high"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "26",
+          "%"
+        ],
+        "label": "Menor valor previsto pós-operatório (VEF₁ ou DLCO)",
+        "level": "high",
+        "verdict": "Alto risco: fazer teste cardiopulmonar de exercício (VO₂ máx.)",
+        "rows": [
+          [
+            "VEF₁ppo",
+            "26,3%"
+          ],
+          [
+            "DLCOppo",
+            "28,9%"
+          ],
+          [
+            "Fração de função preservada",
+            "52,6% (10 de 19 segmentos)"
+          ]
+        ],
+        "note": "",
+        "raw": {
+          "fev": 26.31578947368421,
+          "dlco": 28.94736842105263
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 3,
+      "name": "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%, DLCO não informada: VEF₁ parcial de 49,4%; avaliação incompleta",
+      "input": {
+        "vef1": 70,
+        "seg": 5,
+        "obs": 2
+      },
+      "publicOutput": {
+        "id": "vef1-dlco-pos-operatorio",
+        "main": [
+          "49",
+          "%"
+        ],
+        "label": "VEF₁ parcial: DLCO não informada",
+        "raw": {
+          "fev": 49.411764705882355,
+          "dlco": null
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "fev": 49.41
+        },
+        "level": "info"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "49",
+          "%"
+        ],
+        "label": "VEF₁ parcial: DLCO não informada",
+        "level": "info",
+        "verdict": "Avaliação incompleta: DLCO não informada. O VEF₁ppo isolado não estabelece baixo risco. Se VEF₁ppo <30%, o resumo ACCP 2013 já indica avaliação cardiopulmonar de exercício; a avaliação global permanece incompleta.",
+        "rows": [
+          [
+            "VEF₁ppo",
+            "49,4%"
+          ],
+          [
+            "DLCOppo",
+            "não informado"
+          ],
+          [
+            "Fração de função preservada",
+            "70,6% (12 de 17 segmentos)"
+          ]
+        ],
+        "note": "A ACCP recomenda medir a DLCO em todos os candidatos a ressecção, mesmo com VEF₁ normal.",
+        "raw": {
+          "fev": 49.411764705882355,
+          "dlco": null
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 4,
+      "name": "18 segmentos com 2 obstruídos: inválido",
+      "input": {
+        "vef1": 70,
+        "seg": 18,
+        "obs": 2
+      },
+      "publicOutput": {
+        "error": "Os segmentos a ressecar não podem passar do total de segmentos funcionantes (19 menos os obstruídos).",
+        "code": "FORMULA_DOMAIN"
+      },
+      "sourceExpected": {
+        "error": true
+      },
+      "state": "existing-rejection"
+    }
+  ]
+}

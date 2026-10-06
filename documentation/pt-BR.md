@@ -96,3 +96,53 @@ Resultado da fórmula ou classificação. Interpretação, conduta e aplicabilid
 Apache-2.0 aplica-se somente ao código da ELUCENIA. Os instrumentos, publicações, traduções e dados mantêm os direitos dos respectivos titulares. Preserve LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+As informações abaixo preservam as saídas do método para exemplos sintéticos. Não constituem validação clínica independente.
+
+### 1
+
+Baixo risco: cirurgia sem testes adicionais (VEF₁ppo e DLCOppo > 60%)
+
+| Detalhes do resultado | |
+| --- | --- |
+| VEF₁ppo | 80,5% |
+| DLCOppo | 76,1% |
+| Fração de função preservada | 89,5% (17 de 19 segmentos) |
+
+
+### 2
+
+Risco aumentado: fazer teste de exercício simples (escada ou shuttle walk)
+
+| Detalhes do resultado | |
+| --- | --- |
+| VEF₁ppo | 58,9% |
+| DLCOppo | 55,3% |
+| Fração de função preservada | 73,7% (14 de 19 segmentos) |
+
+
+### 3
+
+Alto risco: fazer teste cardiopulmonar de exercício (VO₂ máx.)
+
+| Detalhes do resultado | |
+| --- | --- |
+| VEF₁ppo | 26,3% |
+| DLCOppo | 28,9% |
+| Fração de função preservada | 52,6% (10 de 19 segmentos) |
+
+
+### 4
+
+Avaliação incompleta: DLCO não informada. O VEF₁ppo isolado não estabelece baixo risco. Se VEF₁ppo <30%, o resumo ACCP 2013 já indica avaliação cardiopulmonar de exercício; a avaliação global permanece incompleta.
+
+| Detalhes do resultado | |
+| --- | --- |
+| VEF₁ppo | 49,4% |
+| DLCOppo | não informado |
+| Fração de função preservada | 70,6% (12 de 17 segmentos) |
+
+A ACCP recomenda medir a DLCO em todos os candidatos a ressecção, mesmo com VEF₁ normal.
+

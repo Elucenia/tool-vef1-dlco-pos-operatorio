@@ -96,3 +96,53 @@ Risultato della formula o classificazione. Interpretazione, condotta e applicabi
 Apache-2.0 si applica solo al codice di ELUCENIA. I diritti su strumenti, pubblicazioni, traduzioni e dati restano ai rispettivi titolari. Conservi LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Risultati documentati
+
+Le informazioni seguenti conservano gli output del metodo per esempi sintetici. Non costituiscono una validazione clinica indipendente.
+
+### 1
+
+Rischio basso: chirurgia senza test aggiuntivi (FEV₁ppo e DLCOppo > 60%)
+
+| Dettagli del risultato | |
+| --- | --- |
+| FEV₁ppo | 80,5% |
+| DLCOppo | 76,1% |
+| Frazione di funzione preservata | 89,5% (17 di 19 segmenti) |
+
+
+### 2
+
+Rischio aumentato: eseguire un test da sforzo semplice (scale o shuttle walk)
+
+| Dettagli del risultato | |
+| --- | --- |
+| FEV₁ppo | 58,9% |
+| DLCOppo | 55,3% |
+| Frazione di funzione preservata | 73,7% (14 di 19 segmenti) |
+
+
+### 3
+
+Rischio alto: eseguire un test da sforzo cardiopolmonare (VO₂ max)
+
+| Dettagli del risultato | |
+| --- | --- |
+| FEV₁ppo | 26,3% |
+| DLCOppo | 28,9% |
+| Frazione di funzione preservata | 52,6% (10 di 19 segmenti) |
+
+
+### 4
+
+Valutazione incompleta: DLCO non riportata. Il solo FEV₁ppo non stabilisce un basso rischio. Se FEV₁ppo <30%, il riepilogo ACCP 2013 indica già un test da sforzo cardiopolmonare; la valutazione complessiva rimane incompleta.
+
+| Dettagli del risultato | |
+| --- | --- |
+| FEV₁ppo | 49,4% |
+| DLCOppo | non riportato |
+| Frazione di funzione preservata | 70,6% (12 di 17 segmenti) |
+
+L’ACCP raccomanda di misurare la DLCO in tutti i candidati alla resezione, anche con FEV₁ normale.
+

@@ -1,0 +1,2526 @@
+{
+  "id": "vef1-dlco-pos-operatorio",
+  "implementationVersion": "vef1-dlco-pos-operatorio@native-2026-10-05+f82b8e546c1d",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "VEF₁ppo",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "80,5%",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "76,1%",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Fração de função preservada",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "89,5% (17 de 19 segmentos)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Baixo risco: cirurgia sem testes adicionais (VEF₁ppo e DLCOppo > 60%)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "VEF₁ppo",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "58,9%",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "55,3%",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Fração de função preservada",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "73,7% (14 de 19 segmentos)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Risco aumentado: fazer teste de exercício simples (escada ou shuttle walk)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Estimativa segmentar inicial (9 segmentos funcionantes a ressecar), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%; não substitui perfusão medida na pneumonectomia",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "VEF₁ppo",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "26,3%",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "28,9%",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Fração de função preservada",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "52,6% (10 de 19 segmentos)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Alto risco: fazer teste cardiopulmonar de exercício (VO₂ máx.)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%, DLCO não informada: VEF₁ parcial de 49,4%; avaliação incompleta",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "VEF₁ppo",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "49,4%",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "não informado",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Fração de função preservada",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "70,6% (12 de 17 segmentos)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Avaliação incompleta: DLCO não informada. O VEF₁ppo isolado não estabelece baixo risco. Se VEF₁ppo <30%, o resumo ACCP 2013 já indica avaliação cardiopulmonar de exercício; a avaliação global permanece incompleta.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "A ACCP recomenda medir a DLCO em todos os candidatos a ressecção, mesmo com VEF₁ normal.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "info"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo FEV₁",
+                "locale": "en",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "80.5%",
+                "locale": "en",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  80.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo DLCO",
+                "locale": "en",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "76.1%",
+                "locale": "en",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  76.1
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Fraction of preserved function",
+                "locale": "en",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "89.5% (17 of 19 segments)",
+                "locale": "en",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  89.5,
+                  17,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Low risk: surgery without additional testing (ppo FEV₁ and ppo DLCO > 60%)",
+            "locale": "en",
+            "template": "documented-authored-87817f629f0f9a49ea6d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo FEV₁",
+                "locale": "en",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "58.9%",
+                "locale": "en",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  58.9
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo DLCO",
+                "locale": "en",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "55.3%",
+                "locale": "en",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  55.3
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Fraction of preserved function",
+                "locale": "en",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "73.7% (14 of 19 segments)",
+                "locale": "en",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  73.7,
+                  14,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Increased risk: perform a simple exercise test (stairs or shuttle walk)",
+            "locale": "en",
+            "template": "documented-authored-67b5657ae64f6710ebf1"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Estimativa segmentar inicial (9 segmentos funcionantes a ressecar), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%; não substitui perfusão medida na pneumonectomia",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo FEV₁",
+                "locale": "en",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "26.3%",
+                "locale": "en",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  26.3
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo DLCO",
+                "locale": "en",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "28.9%",
+                "locale": "en",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  28.9
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Fraction of preserved function",
+                "locale": "en",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "52.6% (10 of 19 segments)",
+                "locale": "en",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  52.6,
+                  10,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "High risk: perform cardiopulmonary exercise testing (max VO₂)",
+            "locale": "en",
+            "template": "documented-authored-0b07c93f56fe04b98167"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%, DLCO não informada: VEF₁ parcial de 49,4%; avaliação incompleta",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo FEV₁",
+                "locale": "en",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "49.4%",
+                "locale": "en",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  49.4
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo DLCO",
+                "locale": "en",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "not reported",
+                "locale": "en",
+                "template": "documented-authored-c32be6f4a17556f2aa3d"
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Fraction of preserved function",
+                "locale": "en",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "70.6% (12 of 17 segments)",
+                "locale": "en",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  70.6,
+                  12,
+                  17
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Incomplete assessment: DLCO not reported. Isolated ppo FEV₁ does not establish low risk. If ppo FEV₁ <30%, the ACCP 2013 summary already indicates cardiopulmonary exercise testing; the overall assessment remains incomplete.",
+            "locale": "en",
+            "template": "documented-authored-1080a87a683222d283a9"
+          },
+          "note": {
+            "text": "ACCP recommends measuring DLCO in all candidates for resection, even with normal FEV₁.",
+            "locale": "en",
+            "template": "documented-authored-f463cd5eb1f44928b839"
+          },
+          "level": "info"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "VEF₁ppo",
+                "locale": "es",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "80,5%",
+                "locale": "es",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  80.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "es",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "76,1%",
+                "locale": "es",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  76.1
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Fracción de función preservada",
+                "locale": "es",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "89,5% (17 de 19 segmentos)",
+                "locale": "es",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  89.5,
+                  17,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Riesgo bajo: cirugía sin pruebas adicionales (VEF₁ppo y DLCOppo > 60%)",
+            "locale": "es",
+            "template": "documented-authored-87817f629f0f9a49ea6d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "VEF₁ppo",
+                "locale": "es",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "58,9%",
+                "locale": "es",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  58.9
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "es",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "55,3%",
+                "locale": "es",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  55.3
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Fracción de función preservada",
+                "locale": "es",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "73,7% (14 de 19 segmentos)",
+                "locale": "es",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  73.7,
+                  14,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Riesgo aumentado: realizar una prueba de ejercicio simple (escaleras o shuttle walk)",
+            "locale": "es",
+            "template": "documented-authored-67b5657ae64f6710ebf1"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Estimativa segmentar inicial (9 segmentos funcionantes a ressecar), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%; não substitui perfusão medida na pneumonectomia",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "VEF₁ppo",
+                "locale": "es",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "26,3%",
+                "locale": "es",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  26.3
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "es",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "28,9%",
+                "locale": "es",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  28.9
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Fracción de función preservada",
+                "locale": "es",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "52,6% (10 de 19 segmentos)",
+                "locale": "es",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  52.6,
+                  10,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Riesgo alto: realizar una prueba de ejercicio cardiopulmonar (VO₂ máx.)",
+            "locale": "es",
+            "template": "documented-authored-0b07c93f56fe04b98167"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%, DLCO não informada: VEF₁ parcial de 49,4%; avaliação incompleta",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "VEF₁ppo",
+                "locale": "es",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "49,4%",
+                "locale": "es",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  49.4
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "es",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "no informado",
+                "locale": "es",
+                "template": "documented-authored-c32be6f4a17556f2aa3d"
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Fracción de función preservada",
+                "locale": "es",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "70,6% (12 de 17 segmentos)",
+                "locale": "es",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  70.6,
+                  12,
+                  17
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Evaluación incompleta: no se informó la DLCO. El VEF₁ppo aislado no establece bajo riesgo. Si VEF₁ppo <30%, el resumen ACCP 2013 ya indica prueba de ejercicio cardiopulmonar; la evaluación global sigue siendo incompleta.",
+            "locale": "es",
+            "template": "documented-authored-1080a87a683222d283a9"
+          },
+          "note": {
+            "text": "La ACCP recomienda medir la DLCO en todos los candidatos a resección, incluso con VEF₁ normal.",
+            "locale": "es",
+            "template": "documented-authored-f463cd5eb1f44928b839"
+          },
+          "level": "info"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "VEMSppo",
+                "locale": "fr",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "80,5%",
+                "locale": "fr",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  80.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "fr",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "76,1%",
+                "locale": "fr",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  76.1
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Fraction de fonction préservée",
+                "locale": "fr",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "89,5 % (17 sur 19 segments)",
+                "locale": "fr",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  89.5,
+                  17,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Risque faible : chirurgie sans examens complémentaires (VEMSppo et DLCOppo > 60%)",
+            "locale": "fr",
+            "template": "documented-authored-87817f629f0f9a49ea6d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "VEMSppo",
+                "locale": "fr",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "58,9%",
+                "locale": "fr",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  58.9
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "fr",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "55,3%",
+                "locale": "fr",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  55.3
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Fraction de fonction préservée",
+                "locale": "fr",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "73,7 % (14 sur 19 segments)",
+                "locale": "fr",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  73.7,
+                  14,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Risque accru : effectuer un test d’effort simple (escaliers ou shuttle walk)",
+            "locale": "fr",
+            "template": "documented-authored-67b5657ae64f6710ebf1"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Estimativa segmentar inicial (9 segmentos funcionantes a ressecar), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%; não substitui perfusão medida na pneumonectomia",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "VEMSppo",
+                "locale": "fr",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "26,3%",
+                "locale": "fr",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  26.3
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "fr",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "28,9%",
+                "locale": "fr",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  28.9
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Fraction de fonction préservée",
+                "locale": "fr",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "52,6 % (10 sur 19 segments)",
+                "locale": "fr",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  52.6,
+                  10,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Risque élevé : effectuer une épreuve d’effort cardiopulmonaire (VO₂ max.)",
+            "locale": "fr",
+            "template": "documented-authored-0b07c93f56fe04b98167"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%, DLCO não informada: VEF₁ parcial de 49,4%; avaliação incompleta",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "VEMSppo",
+                "locale": "fr",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "49,4%",
+                "locale": "fr",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  49.4
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "fr",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "non rapporté",
+                "locale": "fr",
+                "template": "documented-authored-c32be6f4a17556f2aa3d"
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Fraction de fonction préservée",
+                "locale": "fr",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "70,6 % (12 sur 17 segments)",
+                "locale": "fr",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  70.6,
+                  12,
+                  17
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Évaluation incomplète : DLCO non rapportée. Le VEMSppo isolé n’établit pas un faible risque. Si VEMSppo <30%, le résumé ACCP 2013 indique déjà une épreuve d’effort cardiopulmonaire ; l’évaluation globale reste incomplète.",
+            "locale": "fr",
+            "template": "documented-authored-1080a87a683222d283a9"
+          },
+          "note": {
+            "text": "L’ACCP recommande de mesurer la DLCO chez tous les candidats à une résection, même avec un VEMS normal.",
+            "locale": "fr",
+            "template": "documented-authored-f463cd5eb1f44928b839"
+          },
+          "level": "info"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo-FEV₁",
+                "locale": "de",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "80,5%",
+                "locale": "de",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  80.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo-DLCO",
+                "locale": "de",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "76,1%",
+                "locale": "de",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  76.1
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Anteil der erhaltenen Funktion",
+                "locale": "de",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "89,5 % (17 von 19 Segmenten)",
+                "locale": "de",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  89.5,
+                  17,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Niedriges Risiko: Operation ohne zusätzliche Tests (ppo-FEV₁ und ppo-DLCO > 60%)",
+            "locale": "de",
+            "template": "documented-authored-87817f629f0f9a49ea6d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo-FEV₁",
+                "locale": "de",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "58,9%",
+                "locale": "de",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  58.9
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo-DLCO",
+                "locale": "de",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "55,3%",
+                "locale": "de",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  55.3
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Anteil der erhaltenen Funktion",
+                "locale": "de",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "73,7 % (14 von 19 Segmenten)",
+                "locale": "de",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  73.7,
+                  14,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Erhöhtes Risiko: einfachen Belastungstest durchführen (Treppensteigen oder Shuttle-Walk-Test)",
+            "locale": "de",
+            "template": "documented-authored-67b5657ae64f6710ebf1"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Estimativa segmentar inicial (9 segmentos funcionantes a ressecar), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%; não substitui perfusão medida na pneumonectomia",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo-FEV₁",
+                "locale": "de",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "26,3%",
+                "locale": "de",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  26.3
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo-DLCO",
+                "locale": "de",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "28,9%",
+                "locale": "de",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  28.9
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Anteil der erhaltenen Funktion",
+                "locale": "de",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "52,6 % (10 von 19 Segmenten)",
+                "locale": "de",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  52.6,
+                  10,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Hohes Risiko: kardiopulmonale Belastungsuntersuchung durchführen (max. VO₂)",
+            "locale": "de",
+            "template": "documented-authored-0b07c93f56fe04b98167"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%, DLCO não informada: VEF₁ parcial de 49,4%; avaliação incompleta",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo-FEV₁",
+                "locale": "de",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "49,4%",
+                "locale": "de",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  49.4
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo-DLCO",
+                "locale": "de",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "nicht angegeben",
+                "locale": "de",
+                "template": "documented-authored-c32be6f4a17556f2aa3d"
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Anteil der erhaltenen Funktion",
+                "locale": "de",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "70,6 % (12 von 17 Segmenten)",
+                "locale": "de",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  70.6,
+                  12,
+                  17
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Unvollständige Beurteilung: DLCO nicht angegeben. Ein isolierter ppo-FEV₁ begründet kein niedriges Risiko. Wenn ppo-FEV₁ <30%, weist die ACCP-Zusammenfassung 2013 bereits auf eine kardiopulmonale Belastungsuntersuchung hin; die Gesamtbeurteilung bleibt unvollständig.",
+            "locale": "de",
+            "template": "documented-authored-1080a87a683222d283a9"
+          },
+          "note": {
+            "text": "Die ACCP empfiehlt, bei allen Resektionskandidaten die DLCO zu messen, auch bei normalem FEV₁.",
+            "locale": "de",
+            "template": "documented-authored-f463cd5eb1f44928b839"
+          },
+          "level": "info"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "FEV₁ppo",
+                "locale": "it",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "80,5%",
+                "locale": "it",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  80.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "it",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "76,1%",
+                "locale": "it",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  76.1
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Frazione di funzione preservata",
+                "locale": "it",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "89,5% (17 di 19 segmenti)",
+                "locale": "it",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  89.5,
+                  17,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Rischio basso: chirurgia senza test aggiuntivi (FEV₁ppo e DLCOppo > 60%)",
+            "locale": "it",
+            "template": "documented-authored-87817f629f0f9a49ea6d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "FEV₁ppo",
+                "locale": "it",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "58,9%",
+                "locale": "it",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  58.9
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "it",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "55,3%",
+                "locale": "it",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  55.3
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Frazione di funzione preservata",
+                "locale": "it",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "73,7% (14 di 19 segmenti)",
+                "locale": "it",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  73.7,
+                  14,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Rischio aumentato: eseguire un test da sforzo semplice (scale o shuttle walk)",
+            "locale": "it",
+            "template": "documented-authored-67b5657ae64f6710ebf1"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Estimativa segmentar inicial (9 segmentos funcionantes a ressecar), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%; não substitui perfusão medida na pneumonectomia",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "FEV₁ppo",
+                "locale": "it",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "26,3%",
+                "locale": "it",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  26.3
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "it",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "28,9%",
+                "locale": "it",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  28.9
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Frazione di funzione preservata",
+                "locale": "it",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "52,6% (10 di 19 segmenti)",
+                "locale": "it",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  52.6,
+                  10,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Rischio alto: eseguire un test da sforzo cardiopolmonare (VO₂ max)",
+            "locale": "it",
+            "template": "documented-authored-0b07c93f56fe04b98167"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%, DLCO não informada: VEF₁ parcial de 49,4%; avaliação incompleta",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "FEV₁ppo",
+                "locale": "it",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "49,4%",
+                "locale": "it",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  49.4
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "it",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "non riportato",
+                "locale": "it",
+                "template": "documented-authored-c32be6f4a17556f2aa3d"
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "Frazione di funzione preservata",
+                "locale": "it",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "70,6% (12 di 17 segmenti)",
+                "locale": "it",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  70.6,
+                  12,
+                  17
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Valutazione incompleta: DLCO non riportata. Il solo FEV₁ppo non stabilisce un basso rischio. Se FEV₁ppo <30%, il riepilogo ACCP 2013 indica già un test da sforzo cardiopolmonare; la valutazione complessiva rimane incompleta.",
+            "locale": "it",
+            "template": "documented-authored-1080a87a683222d283a9"
+          },
+          "note": {
+            "text": "L’ACCP raccomanda di misurare la DLCO in tutti i candidati alla resezione, anche con FEV₁ normale.",
+            "locale": "it",
+            "template": "documented-authored-f463cd5eb1f44928b839"
+          },
+          "level": "info"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "FEV₁ppo",
+                "locale": "ar",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "٨٠٫٥%",
+                "locale": "ar",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  80.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "ar",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "٧٦٫١%",
+                "locale": "ar",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  76.1
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "نسبة الوظيفة المحفوظة",
+                "locale": "ar",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "٨٩٫٥% (١٧ من ١٩ قطاعات)",
+                "locale": "ar",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  89.5,
+                  17,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "خطورة منخفضة: جراحة دون اختبارات إضافية (FEV₁ppo و DLCOppo > 60%)",
+            "locale": "ar",
+            "template": "documented-authored-87817f629f0f9a49ea6d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "FEV₁ppo",
+                "locale": "ar",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "٥٨٫٩%",
+                "locale": "ar",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  58.9
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "ar",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "٥٥٫٣%",
+                "locale": "ar",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  55.3
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "نسبة الوظيفة المحفوظة",
+                "locale": "ar",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "٧٣٫٧% (١٤ من ١٩ قطاعات)",
+                "locale": "ar",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  73.7,
+                  14,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "خطورة متزايدة: إجراء اختبار جهد بسيط (صعود الدرج أو المشي المكوكي)",
+            "locale": "ar",
+            "template": "documented-authored-67b5657ae64f6710ebf1"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Estimativa segmentar inicial (9 segmentos funcionantes a ressecar), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%; não substitui perfusão medida na pneumonectomia",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "FEV₁ppo",
+                "locale": "ar",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "٢٦٫٣%",
+                "locale": "ar",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  26.3
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "ar",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "٢٨٫٩%",
+                "locale": "ar",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  28.9
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "نسبة الوظيفة المحفوظة",
+                "locale": "ar",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "٥٢٫٦% (١٠ من ١٩ قطاعات)",
+                "locale": "ar",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  52.6,
+                  10,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "خطورة عالية: إجراء اختبار جهد قلبي رئوي (VO₂ الأقصى)",
+            "locale": "ar",
+            "template": "documented-authored-0b07c93f56fe04b98167"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%, DLCO não informada: VEF₁ parcial de 49,4%; avaliação incompleta",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "FEV₁ppo",
+                "locale": "ar",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "٤٩٫٤%",
+                "locale": "ar",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  49.4
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "DLCOppo",
+                "locale": "ar",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "غير مذكور",
+                "locale": "ar",
+                "template": "documented-authored-c32be6f4a17556f2aa3d"
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "نسبة الوظيفة المحفوظة",
+                "locale": "ar",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "٧٠٫٦% (١٢ من ١٧ قطاعات)",
+                "locale": "ar",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  70.6,
+                  12,
+                  17
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "تقييم غير مكتمل: لم تُبلَّغ DLCO. لا يثبت FEV₁ppo وحده خطورة منخفضة. إذا كان FEV₁ppo <30%، فإن ملخص ACCP 2013 يشير بالفعل إلى اختبار جهد قلبي رئوي؛ ويبقى التقييم العام غير مكتمل.",
+            "locale": "ar",
+            "template": "documented-authored-1080a87a683222d283a9"
+          },
+          "note": {
+            "text": "توصي ACCP بقياس DLCO لدى جميع المرشحين للاستئصال، حتى مع FEV₁ طبيعي.",
+            "locale": "ar",
+            "template": "documented-authored-f463cd5eb1f44928b839"
+          },
+          "level": "info"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo FEV₁",
+                "locale": "zh",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "80.5%",
+                "locale": "zh",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  80.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo DLCO",
+                "locale": "zh",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "76.1%",
+                "locale": "zh",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  76.1
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "保留功能的比例",
+                "locale": "zh",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "89.5%（17 / 19 个肺段）",
+                "locale": "zh",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  89.5,
+                  17,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "低风险：无需额外检查即可手术（ppo FEV₁ 和 ppo DLCO > 60%）",
+            "locale": "zh",
+            "template": "documented-authored-87817f629f0f9a49ea6d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo FEV₁",
+                "locale": "zh",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "58.9%",
+                "locale": "zh",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  58.9
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo DLCO",
+                "locale": "zh",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "55.3%",
+                "locale": "zh",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  55.3
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "保留功能的比例",
+                "locale": "zh",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "73.7%（14 / 19 个肺段）",
+                "locale": "zh",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  73.7,
+                  14,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "风险增加：进行简单运动试验（爬楼梯或 shuttle walk）",
+            "locale": "zh",
+            "template": "documented-authored-67b5657ae64f6710ebf1"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Estimativa segmentar inicial (9 segmentos funcionantes a ressecar), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%; não substitui perfusão medida na pneumonectomia",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo FEV₁",
+                "locale": "zh",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "26.3%",
+                "locale": "zh",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  26.3
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo DLCO",
+                "locale": "zh",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "28.9%",
+                "locale": "zh",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  28.9
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "保留功能的比例",
+                "locale": "zh",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "52.6%（10 / 19 个肺段）",
+                "locale": "zh",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  52.6,
+                  10,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "高风险：进行心肺运动试验（最大 VO₂）",
+            "locale": "zh",
+            "template": "documented-authored-0b07c93f56fe04b98167"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%, DLCO não informada: VEF₁ parcial de 49,4%; avaliação incompleta",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo FEV₁",
+                "locale": "zh",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "49.4%",
+                "locale": "zh",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  49.4
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo DLCO",
+                "locale": "zh",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "未报告",
+                "locale": "zh",
+                "template": "documented-authored-c32be6f4a17556f2aa3d"
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "保留功能的比例",
+                "locale": "zh",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "70.6%（12 / 17 个肺段）",
+                "locale": "zh",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  70.6,
+                  12,
+                  17
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "评估不完整：未报告 DLCO。单独的 ppo FEV₁ 不能确定为低风险。若 ppo FEV₁ <30%，ACCP 2013 摘要已提示进行心肺运动试验；总体评估仍不完整。",
+            "locale": "zh",
+            "template": "documented-authored-1080a87a683222d283a9"
+          },
+          "note": {
+            "text": "ACCP 建议对所有拟行切除的患者测量 DLCO，即使 FEV₁ 正常。",
+            "locale": "zh",
+            "template": "documented-authored-f463cd5eb1f44928b839"
+          },
+          "level": "info"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo FEV₁",
+                "locale": "ja",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "80.5%",
+                "locale": "ja",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  80.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo DLCO",
+                "locale": "ja",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "76.1%",
+                "locale": "ja",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  76.1
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "温存機能の割合",
+                "locale": "ja",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "89.5%（17 / 19 セグメント）",
+                "locale": "ja",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  89.5,
+                  17,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "低リスク：追加検査なしで手術可（ppo FEV₁ および ppo DLCO > 60%）",
+            "locale": "ja",
+            "template": "documented-authored-87817f629f0f9a49ea6d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo FEV₁",
+                "locale": "ja",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "58.9%",
+                "locale": "ja",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  58.9
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo DLCO",
+                "locale": "ja",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "55.3%",
+                "locale": "ja",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  55.3
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "温存機能の割合",
+                "locale": "ja",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "73.7%（14 / 19 セグメント）",
+                "locale": "ja",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  73.7,
+                  14,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "リスク増加：簡単な運動試験を行う（階段昇降またはシャトルウォーク）",
+            "locale": "ja",
+            "template": "documented-authored-67b5657ae64f6710ebf1"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Estimativa segmentar inicial (9 segmentos funcionantes a ressecar), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%; não substitui perfusão medida na pneumonectomia",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo FEV₁",
+                "locale": "ja",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "26.3%",
+                "locale": "ja",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  26.3
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo DLCO",
+                "locale": "ja",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "28.9%",
+                "locale": "ja",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  28.9
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "温存機能の割合",
+                "locale": "ja",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "52.6%（10 / 19 セグメント）",
+                "locale": "ja",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  52.6,
+                  10,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "高リスク：心肺運動負荷試験を行う（最大 VO₂）",
+            "locale": "ja",
+            "template": "documented-authored-0b07c93f56fe04b98167"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%, DLCO não informada: VEF₁ parcial de 49,4%; avaliação incompleta",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo FEV₁",
+                "locale": "ja",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "49.4%",
+                "locale": "ja",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  49.4
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo DLCO",
+                "locale": "ja",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "記載なし",
+                "locale": "ja",
+                "template": "documented-authored-c32be6f4a17556f2aa3d"
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "温存機能の割合",
+                "locale": "ja",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "70.6%（12 / 17 セグメント）",
+                "locale": "ja",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  70.6,
+                  12,
+                  17
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "評価不完全：DLCOの記載なし。単独のppo FEV₁では低リスクは確立しない。ppo FEV₁ <30% の場合、ACCP 2013 要約ではすでに心肺運動負荷試験が示されており、全体評価は不完全のままである。",
+            "locale": "ja",
+            "template": "documented-authored-1080a87a683222d283a9"
+          },
+          "note": {
+            "text": "ACCPは、FEV₁が正常でも、切除候補者全員でDLCOを測定することを推奨している。",
+            "locale": "ja",
+            "template": "documented-authored-f463cd5eb1f44928b839"
+          },
+          "level": "info"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "Lobectomia média (2 segmentos), VEF₁ 90%, DLCO 85%: 80,5% e 76,1%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo FEV₁",
+                "locale": "hi",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "80.5%",
+                "locale": "hi",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  80.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo DLCO",
+                "locale": "hi",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "76.1%",
+                "locale": "hi",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  76.1
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "संरक्षित कार्य का अंश",
+                "locale": "hi",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "89.5% (17 of 19 खंड)",
+                "locale": "hi",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  89.5,
+                  17,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "कम जोखिम: अतिरिक्त परीक्षण के बिना सर्जरी (ppo FEV₁ और ppo DLCO > 60%)",
+            "locale": "hi",
+            "template": "documented-authored-87817f629f0f9a49ea6d"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Lobectomia inferior direita (5), VEF₁ 80%, DLCO 75%: 58,9% e 55,3%",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo FEV₁",
+                "locale": "hi",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "58.9%",
+                "locale": "hi",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  58.9
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo DLCO",
+                "locale": "hi",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "55.3%",
+                "locale": "hi",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  55.3
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "संरक्षित कार्य का अंश",
+                "locale": "hi",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "73.7% (14 of 19 खंड)",
+                "locale": "hi",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  73.7,
+                  14,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "बढ़ा हुआ जोखिम: एक सरल व्यायाम परीक्षण करें (सीढ़ियाँ या शटल वॉक)",
+            "locale": "hi",
+            "template": "documented-authored-67b5657ae64f6710ebf1"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Estimativa segmentar inicial (9 segmentos funcionantes a ressecar), VEF₁ 50%, DLCO 55%: 26,3% e 28,9%; não substitui perfusão medida na pneumonectomia",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo FEV₁",
+                "locale": "hi",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "26.3%",
+                "locale": "hi",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  26.3
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo DLCO",
+                "locale": "hi",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "28.9%",
+                "locale": "hi",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  28.9
+                ]
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "संरक्षित कार्य का अंश",
+                "locale": "hi",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "52.6% (10 of 19 खंड)",
+                "locale": "hi",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  52.6,
+                  10,
+                  19
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "उच्च जोखिम: कार्डियोपल्मोनरी व्यायाम परीक्षण करें (अधिकतम VO₂)",
+            "locale": "hi",
+            "template": "documented-authored-0b07c93f56fe04b98167"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "5 segmentos com 2 obstruídos (z = 17), VEF₁ 70%, DLCO não informada: VEF₁ parcial de 49,4%; avaliação incompleta",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ppo FEV₁",
+                "locale": "hi",
+                "template": "documented-authored-4a09463c329eda4a81f6"
+              },
+              "value": {
+                "text": "49.4%",
+                "locale": "hi",
+                "template": "documented-authored-b3b3ada127508c92193a",
+                "sourceNumbers": [
+                  49.4
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "ppo DLCO",
+                "locale": "hi",
+                "template": "documented-authored-468c51fdb5c71e36902b"
+              },
+              "value": {
+                "text": "रिपोर्ट नहीं की गई",
+                "locale": "hi",
+                "template": "documented-authored-c32be6f4a17556f2aa3d"
+              }
+            },
+            {
+              "key": "documented-2",
+              "label": {
+                "text": "संरक्षित कार्य का अंश",
+                "locale": "hi",
+                "template": "documented-authored-3077e2de11dd62aed9aa"
+              },
+              "value": {
+                "text": "70.6% (12 of 17 खंड)",
+                "locale": "hi",
+                "template": "documented-authored-77406151f9efc2a88c9e",
+                "sourceNumbers": [
+                  70.6,
+                  12,
+                  17
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "अपूर्ण मूल्यांकन: DLCO रिपोर्ट नहीं की गई। केवल ppo FEV₁ कम जोखिम स्थापित नहीं करता। यदि ppo FEV₁ <30% है, तो ACCP 2013 सारांश पहले से ही कार्डियोपल्मोनरी व्यायाम परीक्षण इंगित करता है; समग्र मूल्यांकन अभी भी अपूर्ण है।",
+            "locale": "hi",
+            "template": "documented-authored-1080a87a683222d283a9"
+          },
+          "note": {
+            "text": "ACCP सभी रीसैक्शन उम्मीदवारों में DLCO मापने की सिफारिश करता है, भले ही FEV₁ सामान्य हो।",
+            "locale": "hi",
+            "template": "documented-authored-f463cd5eb1f44928b839"
+          },
+          "level": "info"
+        }
+      }
+    ]
+  }
+}

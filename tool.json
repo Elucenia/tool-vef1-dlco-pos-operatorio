@@ -366,7 +366,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "ERS/ESTS 2009, página 22: estimativa inicial por segmentos funcionantes e fórmula pré-pneumonectomia por fração de perfusão medida; cortes do resumo ACCP 2013: ambos >60%, algum entre 30–60% e algum <30%; sem conformidade clínica integral",
-    "implementationVersion": "vef1-dlco-pos-operatorio@native-2026-10-04+2b9dd75698a2",
+    "implementationVersion": "vef1-dlco-pos-operatorio@native-2026-10-05+f82b8e546c1d",
     "currentMethodSource": "ERS/ESTS2009 PDFp6/printed22; ACCP2013 Resultsabstract only",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -696,7 +696,7 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec",
+      "implementationHash": "f82b8e546c1d2f7710f9a2a12b42dc65e86aacab6f2015ea5720d10034f7b9b8",
       "previousInputContract": {
         "fields": [
           {
@@ -764,7 +764,35 @@
         "sourceRows": 9720,
         "uniqueInputObjects": 9716,
         "duplicateRows": 4
-      }
+      },
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "vef1-dlco-pos-operatorio@native-2026-10-04+2b9dd75698a2",
+          "previousImplementationHash": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec",
+          "implementationHash": "f82b8e546c1d2f7710f9a2a12b42dc65e86aacab6f2015ea5720d10034f7b9b8",
+          "scientificBodySha256": "3599e6d3e797980cb4cfee51f37186bd7103594de91238e4f68fa00cd67bff6d",
+          "metadataContractHash": "2ecfe251837dd07b3011055692ee0e3f0979336356a1a47a0499019d3d918225",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "Estimativa para avaliação funcional de candidatos a ressecção pulmonar, com valores pré-operatórios em percentagem do previsto. Escolha o método compatível com a intervenção: contagem segmentar como estimativa inicial; na pneumonectomia, informe a perfusão medida do pulmão a ressecar. Não se deduz perfusão a partir de 19 segmentos. Informe segmentos como contagens inteiras; a contagem a ressecar não pode superar 19 menos os obstruídos. Perfusão de 0–100% é o domínio matemático da implementação; 0% e 100% não demonstram elegibilidade cirúrgica. Sem DLCO, apenas VEF₁ parcial e avaliação incompleta. Algoritmos cardiovasculares, testes de exercício, correção de 2014 e artigo ACCP integral não foram conferidos neste lote. A fonte ERS/ESTS 2009 foi lida nesta página específica; a fonte ACCP 2013, no resumo. Revisão clínica e tradução profissional não realizadas.",
     "sourceLimitEvidence": {
@@ -834,20 +862,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/vef1-dlco-pos-operatorio/calculator.js",
-    "bytes": 10503,
-    "sha256": "2b9dd75698a2a50f9c586916ea91c5cf61e727766f2d65fcbbe8f2c2487123ec"
+    "bytes": 10708,
+    "sha256": "f82b8e546c1d2f7710f9a2a12b42dc65e86aacab6f2015ea5720d10034f7b9b8"
   },
-  "sourceToolSha256": "5c49824e02ae2ccbe9bdd1c2350180e8eb0c8de5c3483a51031843ab387dd790",
+  "sourceToolSha256": "e03794f8e56100c986b0641f27305487fd817646ac7257decd22145318e95397",
   "omittedFullReferenceBanks": [
     {
       "rows": 4,
       "sha256": "1fb46f53482db3d58fd183737764ce7f8f60732ccbba360f0b2e68769600cb4f",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 4,
       "sha256": "1fb46f53482db3d58fd183737764ce7f8f60732ccbba360f0b2e68769600cb4f",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",
